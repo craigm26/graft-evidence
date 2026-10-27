@@ -1,0 +1,4 @@
+shadow (1:4.16.0-7) unstable; urgency=medium
+
+  [ Florent 'Skia' Jacquet ]
+  * d/patches: fix 'upstream' test suite

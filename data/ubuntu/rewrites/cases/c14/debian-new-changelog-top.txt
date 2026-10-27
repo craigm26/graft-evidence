@@ -1,0 +1,4 @@
+sssd (2.12.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Use d/s/options instead of local-options

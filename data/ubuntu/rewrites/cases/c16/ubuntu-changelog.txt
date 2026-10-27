@@ -1,0 +1,50 @@
+bash (5.2.37-2ubuntu5) questing; urgency=medium
+
+  * Dropping delta not considered relevant any more (LP: #2120249)
+    - d/etc.bash.bashrc: add sudo hint
+  * Temporarily set -std=gnu17 to fix FTBFS with gcc-15
+    - https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1098911
+
+ -- Ravi Kant Sharma <ravi.kant.sharma@canonical.com>  Mon, 08 Sep 2025 15:20:42 +0200
+
+bash (5.2.37-2ubuntu4) questing; urgency=medium
+
+  * /etc/bash.bashrc: Explicitly source /etc/profile.d/vte*.sh, and
+    sync the color prompt setting from /etc/skel/.bashrc.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 16 Jun 2025 19:54:28 +0200
+
+bash (5.2.37-2ubuntu3) questing; urgency=medium
+
+  * Undo the change from the last upload, but keep the code commented
+    out.  This should be at a user's discretion.  And there are already
+    explicit hooks for bash-completion and command-not-found.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 11 Jun 2025 10:48:05 +0200
+
+bash (5.2.37-2ubuntu2) questing; urgency=medium
+
+  [ Dimitri John Ledkov ]
+  * Source profile.d from /etc/bash.bashrc to allow packages to ship
+    integration hooks into interactive shells, same ones they already ship
+    for login shells (Closes: #675008) (LP: #2083705)
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 10 Jun 2025 21:09:39 -0400
+
+bash (5.2.37-2ubuntu1) questing; urgency=medium
+
+  * Merge with Debian unstable (LP: #2111514). Remaining changes:
+    - d/skel.bashrc:
+      + run lesspipe
+      + enable ls aliases
+      + set options in ll alias to -alF
+      + define an alert alias
+      + enable colored grep aliases
+    - d/etc.bash.bashrc: add sudo hint
+    - d/p/deb-bash-config.diff: resurrect "Set the default path to comply with Debian policy"
+    - d/tests: add autopkgtest for the built-in path
+    - d/p/fix-rcfile-man.diff: correct the bash(1) man-page
+      + Add a note that --rcfile does not prevent the execution of the
+        system-wide /etc/bash.bashrc file.
+
+ -- Ural Tunaboyu <ural.tunaboyu@canonical.com>  Tue, 20 May 2025 21:19:03 -0700

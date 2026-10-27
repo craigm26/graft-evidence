@@ -1,0 +1,6 @@
+{
+ "id": "c10",
+ "package": "xorg-server",
+ "file": "hw/xquartz/GL/Makefile.in",
+ "merge": "2:21.1.22-1 -> 2:21.1.24-1"
+}

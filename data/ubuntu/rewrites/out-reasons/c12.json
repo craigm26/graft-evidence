@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu changelog 'Remaining changes' lists private home dirs, 1010-1016 extrausers patches, numeric-username (lp2076898) and lp2063200 useradd group validation, none of which Debian 1:4.17.4-2 carries, so they are appended to the new Debian series.", "confidence": 0.75}

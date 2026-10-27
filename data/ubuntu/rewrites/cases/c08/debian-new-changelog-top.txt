@@ -1,0 +1,5 @@
+openssh (1:10.4p1-5) unstable; urgency=medium
+
+  * Drop GSS-API authentication and key exchange support, to reduce
+    pre-authentication attack surface.  Users who need these features should
+    install openssh-client-gssapi or openssh-server-gssapi instead.

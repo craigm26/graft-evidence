@@ -1,0 +1,12 @@
+debian/Set-group-and-mode-for-g-shadow-files.patch
+debian/Keep-using-Debian-adduser-defaults.patch
+debian/Document-the-shadowconfig-utility.patch
+debian/Recommend-using-adduser-and-deluser.patch
+debian/Relax-usernames-groupnames-checking.patch
+upstream/tests-Support-run_some-from-exported-tarball.patch
+debian/tests-disable-su.patch
+debian/tests-libsubid-04_nss-fix-setting-basedir.patch
+debian/Adapt-login.defs-for-Debian.patch
+debian/Define-LOGIN_NAME_MAX-on-HURD.patch
+debian/Stop-building-programs-we-do-not-install.patch
+upstream/lib-user_busy.c-Include-utmpx.h.patch

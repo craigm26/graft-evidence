@@ -1,0 +1,1 @@
+{"decision": "drop", "absent": false, "reason": "Debian now creates the user via gdm3.sysusers and removed the user/group deletion block from postrm, so Ubuntu's Debian-gdm->gdm rename of that block has nothing left to apply to.", "confidence": 0.8}

@@ -1,0 +1,10 @@
+unbound (1.24.2-1) unstable; urgency=medium
+
+  * new upstream security release:
+    Additional fix for CVE-2025-11411 (possible domain hijacking attack),
+    to include YXDOMAIN and non-referral nodata answers in the mitigation
+    as well, reported by TaoFei Guo from Peking University, Yang Luo
+    and JianJun Chen from Tsinghua University.
+    Closes: #1121446, CVE-2025-11411
+  * debian/upstream/signing-key.asc: merge two separate parts into one
+    (keeping the same two keys)

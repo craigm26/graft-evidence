@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "1:10.4p1-4ubuntu1 'debian/openssh-server.ucf-md5sum: update for Ubuntu delta' is still a remaining change, so Ubuntu's historical hashes are kept and Debian's new 1:10.4p1-5 block is added.",
+ "confidence": 0.8
+}

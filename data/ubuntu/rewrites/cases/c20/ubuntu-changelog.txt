@@ -1,0 +1,33 @@
+dbus (1.16.2-2ubuntu4) resolute; urgency=medium
+
+  * dont-stop-dbus.patch: restore Before=sockets.target (LP: #2141603)
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Tue, 03 Mar 2026 12:20:34 +0100
+
+dbus (1.16.2-2ubuntu3) resolute; urgency=medium
+
+  * No-change mass rebuild for Ubuntu 26.04 (LP: #2132257)
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 02 Feb 2026 21:28:07 +0100
+
+dbus (1.16.2-2ubuntu2) questing; urgency=medium
+
+  * Rebuild to include updated RISC-V base ISA RVA23
+
+ -- Heinrich Schuchardt <heinrich.schuchardt@canonical.com>  Wed, 03 Sep 2025 17:42:57 +0000
+
+dbus (1.16.2-2ubuntu1) plucky; urgency=medium
+
+  * Merge from Debian Unstable. Remaining changes:
+    - Add Ubuntu-specific patches:
+      + d/p/u/aa-get-connection-apparmor-security-context.patch
+      + d/p/u/dont-stop-dbus.patch
+    - debian/dbus.postinst, debian/rules: Prevent dbus from being
+      restarted on upgrade.
+    - debian/changelog: Don't drop extra newlines from changelog.
+    - debian/rules: Add comment for Ubuntu about dh_install{init,systemd}
+      invocation.
+  * Dropped change, included in 1.16.2-2:
+    - debian/control: Drop alternative depends on usr-is-merged.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 14 Mar 2025 20:47:28 -0500

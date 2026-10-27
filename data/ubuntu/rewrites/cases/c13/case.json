@@ -1,0 +1,6 @@
+{
+ "id": "c13",
+ "package": "exim4",
+ "file": "debian/EDITME.exim4-heavy.diff",
+ "merge": "4.99.1-1 -> 4.99.4-1"
+}

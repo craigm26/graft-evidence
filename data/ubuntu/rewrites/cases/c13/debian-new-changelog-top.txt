@@ -1,0 +1,4 @@
+exim4 (4.99.4-1) unstable; urgency=low
+
+  * Use new upstream tarball with CVE-2026-48840 fix included, drop separate
+    patch.

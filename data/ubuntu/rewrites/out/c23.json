@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's ppc64el -O3 to -O2 workaround (LP: #2121250) is not in Debian and is kept, while the decode2text.sh removal change is now covered by Debian.", "confidence": 0.75}

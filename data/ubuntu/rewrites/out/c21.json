@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's mode patches still need libpoppler-glib/libsnapd-glib/libsysmetrics build-deps, plus Ubuntu Maintainer and ubuntu/latest Vcs fields; reapplied on Debian 48~rc control.", "confidence": 0.85}

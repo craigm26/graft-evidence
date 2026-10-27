@@ -1,0 +1,29 @@
+gnupg2 (2.4.8-2ubuntu2.1) questing-security; urgency=medium
+
+  * SECURITY UPDATE: Remote Code Execution
+    - debian/patches/CVE-2025-68973.patch: gpg: Fix possible memory
+    corruption in the armor parser.
+    - CVE-2025-68973
+
+ -- Allen Huang <allen.huang@canonical.com>  Mon, 05 Jan 2026 21:39:20 +0000
+
+gnupg2 (2.4.8-2ubuntu2) questing; urgency=medium
+
+  * Rebuild to include updated RISC-V base ISA RVA23
+
+ -- Heinrich Schuchardt <heinrich.schuchardt@canonical.com>  Fri, 05 Sep 2025 11:39:24 +0000
+
+gnupg2 (2.4.8-2ubuntu1) questing; urgency=medium
+
+  * Merge with Debian unstable (LP: #2120550). Remaining changes:
+    - Honor http_proxy= environment variables by default in the systemd user
+      session dirmngr service
+    - Stop building gpg-wks-server, gpg-wks-client on i386
+    - gnupg: Demote gnupg-l10n to Recommends
+    - Demote all Recommends: gnupg to Suggests
+    - Demote gpg-wks-client to Recommends instead
+    - gpg{,sm}: Recommend gpg-agent, dirmngr
+    - Don't build the gpgv-win32 package which only debian-installer uses
+    - Disable swtpm, libss2-dev build-dep on i386
+
+ -- Ravi Kant Sharma <ravi.kant.sharma@canonical.com>  Wed, 13 Aug 2025 13:03:16 +0200

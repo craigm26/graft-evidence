@@ -1,0 +1,16 @@
+debian/README.source
+debian/changelog
+debian/control
+debian/copyright
+debian/docs
+debian/gbp.conf
+debian/gnome-initial-setup.maintscript
+debian/patches/series
+debian/postinst
+debian/postrm
+debian/rules
+debian/salsa-ci.yml
+debian/source/format
+debian/upstream/metadata
+debian/vendor.conf
+debian/watch

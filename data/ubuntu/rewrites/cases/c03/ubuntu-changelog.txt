@@ -1,0 +1,133 @@
+pam (1.5.3-5ubuntu5.7) noble-security; urgency=medium
+
+  * SECURITY UPDATE: account lockout bypass in pam_faillock account
+    management phase (LP: #2164901)
+    - debian/patches/lp-2164901.patch: skip clearing user's failed
+      attempt in modules/pam_faillock/pam_faillock.8.xml,
+      modules/pam_faillock/pam_faillock.c.
+    - No CVE number
+
+ -- Shafayat Hossain Majumder <shafayat.majumder@canonical.com>  Wed, 26 Aug 2026 15:28:35 -0400
+
+pam (1.5.3-5ubuntu5.6) noble-security; urgency=medium
+
+  * SECURITY UPDATE: password recovery via timing discrepancy in pam_userdb
+    module string comparisons
+    - debian/patches/CVE-2026-54411-pre1.patch: libpam: add helper to compare
+      strings in constant time in libpam/include/pam_inline.h.
+    - debian/patches/CVE-2026-54411.patch: pam_userdb: fix password comparison
+      timing leak in libpam/include/pam_inline.h,
+      modules/pam_userdb/pam_userdb.c.
+    - CVE-2026-54411
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 16 Jul 2026 09:44:01 -0400
+
+pam (1.5.3-5ubuntu5.5) noble-security; urgency=medium
+
+  * SECURITY UPDATE: pam_access hostname confusion
+    - debian/patches/CVE-2024-10963.patch: add "nodns" option to disallow
+      resolving of tokens as hostname in
+      modules/pam_access/access.conf.5.xml,
+      modules/pam_access/pam_access.8.xml,
+      modules/pam_access/pam_access.c.
+    - CVE-2024-10963
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 15 Sep 2025 08:37:15 -0400
+
+pam (1.5.3-5ubuntu5.4) noble-security; urgency=medium
+
+  * SECURITY UPDATE: privilege escalation via pam_namespace
+    - debian/patches/pam_namespace_170.patch: sync pam_namespace module to
+      version 1.7.0.
+    - debian/patches/pam_namespace_post170-*.patch: add post-1.7.0 changes
+      from upstream git tree.
+    - debian/patches/pam_namespace_revert_abi.patch: revert ABI change to
+      prevent unintended issues in running daemons.
+    - debian/patches/CVE-2025-6020-1.patch: fix potential privilege
+      escalation.
+    - debian/patches/CVE-2025-6020-2.patch: add flags to indicate path
+      safety.
+    - debian/patches/CVE-2025-6020-3.patch: secure_opendir: do not look at
+      the group ownership.
+    - debian/patches/pam_namespace_o_directory.patch: removed, included in
+      patch cluster above.
+    - CVE-2025-6020
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 12 Jun 2025 10:45:28 -0400
+
+pam (1.5.3-5ubuntu5.2) noble; urgency=medium
+
+  * d/p/031_pam_include: fix loading from /usr/lib/pam.d (LP: #2087827)
+
+ -- Simon Chopin <schopin@ubuntu.com>  Mon, 26 May 2025 16:34:46 +0200
+
+pam (1.5.3-5ubuntu5.1) noble; urgency=medium
+
+  [ Sam Hartman ]
+  * Correct Build depends for docbook5 (LP: #2064360)
+  * Depend on libdb-dev again, bringing back pam_userdb (LP: #2064350)
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Thu, 02 May 2024 16:20:13 -0600
+
+pam (1.5.3-5ubuntu5) noble; urgency=medium
+
+  * d/p/pam_env-remove-deprecation-notice-for-user_readenv.patch: drop
+    deprecation warning about user_readenv from pam_env (LP: #2059859)
+
+ -- Andreas Hasenack <andreas@canonical.com>  Wed, 10 Apr 2024 16:19:22 -0300
+
+pam (1.5.3-5ubuntu4) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 00:03:23 +0000
+
+pam (1.5.3-5ubuntu3) noble; urgency=medium
+
+  * No-change rebuild against libdb5.3t64
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 02 Mar 2024 20:36:06 +0000
+
+pam (1.5.3-5ubuntu2) noble; urgency=medium
+
+  * Fix FTBFS when built with -Werror=implicit-function-declaration
+    (LP: #2055453)
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Thu, 29 Feb 2024 11:53:08 -0700
+
+pam (1.5.3-5ubuntu1) noble; urgency=medium
+
+  * Merge from Debian unstable, remaining changes:
+    - debian/libpam-modules.postinst: Add PATH to /etc/environment if it's
+      not present there or in /etc/security/pam_env.conf. (should send to
+      Debian).
+    - debian/libpam0g.postinst: only ask questions during update-manager
+      when there are non-default services running.
+    - debian/libpam0g.postinst: check if gdm is actually running before
+      trying to reload it.
+    - debian/patches/ubuntu-rlimit_nice_correction: Explicitly
+      initialise RLIMIT_NICE rather than relying on the kernel limits.
+    - debian/patches/pam_umask_usergroups_from_login.defs.patch:
+      Deprecate pam_unix's explicit "usergroups" option and instead read it
+      from /etc/login.def's "USERGROUP_ENAB" option if umask is only defined
+      there. This restores compatibility with the pre-PAM behaviour of login.
+    - debian/patches/pam_motd-legal-notice: display the contents of
+      /etc/legal once, then set a flag in the user's homedir to prevent
+      showing it again.
+    - debian/update-motd.5, debian/libpam-modules.manpages: add a manpage
+      for update-motd, with some best practices and notes of explanation.
+    - debian/patches/update-motd-manpage-ref: add a reference in pam_motd(8)
+      to update-motd(5)
+    - debian/local/common-session{,-noninteractive}: Enable pam_umask by
+      default, now that the umask setting is gone from /etc/profile.
+    - debian/local/pam-auth-update: Add the new md5sums for pam_umask addition.
+    - debian/patches/extrausers.patch: Add a pam_extrausers module
+      that is basically just a copy of pam_unix but looks at
+      /var/lib/extrausers/{group,passwd,shadow} instead of /etc/
+    - debian/libpam-modules-bin.install: install the helper binaries for
+      pam_extrausers to /sbin
+    - debian/rules: Make pam_extrausers_chkpwd sguid shadow
+    - Add lintian override for pam_extrausers_chkpwd
+    - Disable custom daemon restart detection code if needrestart is available
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Thu, 29 Feb 2024 10:25:41 -0700

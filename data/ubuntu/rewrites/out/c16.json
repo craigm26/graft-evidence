@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Debian 5.3 now has the vte hook and profile.d stanza, but Ubuntu's colour-prompt logic is still Ubuntu-only and is carried forward on top of the new Debian file.", "confidence": 0.75}

@@ -1,0 +1,170 @@
+--- EDITME.exim4-light	2026-05-25 12:04:51.806348233 +0200
++++ EDITME.exim4-heavy	2026-05-25 13:13:59.667444053 +0200
+@@ -333,7 +333,7 @@
+ 
+ # This one is very special-purpose, so is not included by default.
+ 
+-# ROUTER_IPLOOKUP=yes
++ROUTER_IPLOOKUP=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -374,7 +374,7 @@
+ 
+ SUPPORT_MAILDIR=yes
+ SUPPORT_MAILSTORE=yes
+-# SUPPORT_MBX=yes
++SUPPORT_MBX=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -439,16 +439,16 @@
+ LOOKUP_DSEARCH=yes
+ # LOOKUP_IBASE=yes
+ # LOOKUP_JSON=yes
+-# LOOKUP_LDAP=yes
++LOOKUP_LDAP=yes
+ # LOOKUP_LMDB=yes
+ 
+-# LOOKUP_MYSQL=yes
++LOOKUP_MYSQL=yes
+ # LOOKUP_MYSQL_PC=mariadb
+ # LOOKUP_NIS=yes
+ # LOOKUP_NISPLUS=yes
+ # LOOKUP_ORACLE=yes
+ LOOKUP_PASSWD=yes
+-# LOOKUP_PGSQL=yes
++LOOKUP_PGSQL=yes
+ # LOOKUP_REDIS=yes
+ LOOKUP_SQLITE=yes
+ # LOOKUP_SQLITE_PC=sqlite3
+@@ -474,7 +474,7 @@
+ # with Solaris 7 onwards. Uncomment whichever of these you are using.
+ 
+ # LDAP_LIB_TYPE=OPENLDAP1
+-# LDAP_LIB_TYPE=OPENLDAP2
++LDAP_LIB_TYPE=OPENLDAP2
+ # LDAP_LIB_TYPE=NETSCAPE
+ # LDAP_LIB_TYPE=SOLARIS
+ 
+@@ -545,6 +545,9 @@
+ # For dynamic-modules builds, use instead LOOKUP_LMDB_INCLUDE & LOOKUP_LMDB_LIBS
+ 
+ 
++LOOKUP_INCLUDE += -I/usr/include/mariadb -I`pg_config --includedir`
++LOOKUP_LIBS += -lldap -llber -lmariadb -lpq
++
+ #------------------------------------------------------------------------------
+ # Compiling the Exim monitor: If you want to compile the Exim monitor, a
+ # program that requires an X11 display, then EXIM_MONITOR should be set to the
+@@ -553,7 +556,7 @@
+ # files are defaulted in the OS/Makefile-Default file, but can be overridden in
+ # local OS-specific make files.
+ 
+-EXIM_MONITOR=eximon.bin
++# EXIM_MONITOR=eximon.bin
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -585,7 +588,7 @@
+ # and the MIME ACL. Please read the documentation to learn more about these
+ # features.
+ 
+-# WITH_CONTENT_SCAN=yes
++WITH_CONTENT_SCAN=yes
+ 
+ # If you have content scanning you may wish to only include some of the scanner
+ # interfaces.  Uncomment any of these lines to remove that code.
+@@ -885,8 +888,8 @@
+ # The heimdal does build but we have no test coverage so it is not know to work.
+ 
+ AUTH_CRAM_MD5=yes
+-# AUTH_CYRUS_SASL=yes
+-# AUTH_DOVECOT=yes
++AUTH_CYRUS_SASL=yes
++AUTH_DOVECOT=yes
+ AUTH_EXTERNAL=yes
+ # AUTH_GSASL=yes
+ # AUTH_GSASL_PC=libgsasl
+@@ -894,8 +897,8 @@
+ # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi
+ # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi heimdal-krb5
+ AUTH_PLAINTEXT=yes
+-# AUTH_SPA=yes
+-# AUTH_TLS=yes
++AUTH_SPA=yes
++AUTH_TLS=yes
+ 
+ # Heimdal through 1.5 required pkg-config 'heimdal-gssapi'; Heimdal 7.1
+ # requires multiple pkg-config files to work with Exim, so the second example
+@@ -908,7 +911,7 @@
+ # Similarly for GNU SASL, unless pkg-config is used via AUTH_GSASL_PC.
+ # Ditto for AUTH_HEIMDAL_GSSAPI(_PC).
+ 
+-# AUTH_LIBS=-lsasl2
++AUTH_LIBS=-lsasl2
+ # AUTH_LIBS=-lgsasl
+ # AUTH_LIBS=-lgssapi -lheimntlm -lkrb5 -lhx509 -lcom_err -lhcrypto -lasn1 -lwind -lroken -lcrypt
+ 
+@@ -1121,7 +1124,7 @@
+ # Perl costs quite a lot of resources. Only do this if you really need it.
+ #
+ 
+-# EXIM_PERL=perl.o
++EXIM_PERL=perl.o
+ 
+ # For a dynamic module build add also SUPPORT_PERL=2 and SUPPORT_PAM_(INCLUED,LIBS)
+ #SUPPORT_PERL=2
+@@ -1136,7 +1139,7 @@
+ # that the local_scan API is made available by the linker. You may also need
+ # to add -ldl to EXTRALIBS so that dlopen() is available to Exim.
+ 
+-# EXPAND_DLFUNC=yes
++EXPAND_DLFUNC=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -1148,11 +1151,11 @@
+ #
+ # For a dynamic module build add SUPPORT_PAM=2 and SUPPORT_PAM_LIBS=-lpam
+ 
+-# SUPPORT_PAM=yes
++SUPPORT_PAM=yes
+ 
+ # You probably need to add -lpam to EXTRALIBS, and in some releases of
+ # GNU/Linux -ldl is also needed.
+-EXTRALIBS=-ldl
++EXTRALIBS=-lpam -export-dynamic
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -1166,7 +1169,7 @@
+ # If you may want to use inbound (server-side) proxying, using Proxy Protocol,
+ # uncomment the line below.
+ 
+-# SUPPORT_PROXY=yes
++SUPPORT_PROXY=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -1199,9 +1202,9 @@
+ # is historic).  The same rules as for other module builds apply; use
+ # SUPPORT_SPF_{INCLUDE,LIBS}.
+ 
+-# SUPPORT_SPF=yes
++SUPPORT_SPF=yes
+ # CFLAGS  += -I/usr/local/include
+-# LDFLAGS += -lspf2
++LDFLAGS += -lspf2
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -1508,7 +1511,7 @@
+ # local part) can be increased by changing this value. It should be set to
+ # a multiple of 16.
+ 
+-# MAX_NAMED_LIST=16
++MAX_NAMED_LIST=32
+ 
+ 
+ #------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu delta (Ubuntu maintainer fields, dropping win32/mingw build, demoting gnupg to Suggests, restricted architectures, no i386 TPM) is still not in Debian, so it is reapplied on top of Debian's new linux-any/Rules-Requires-Root changes.", "confidence": 0.8}

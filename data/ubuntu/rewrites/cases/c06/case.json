@@ -1,0 +1,6 @@
+{
+ "id": "c06",
+ "package": "gtk+3.0",
+ "file": "debian/patches/series",
+ "merge": "3.24.49-3 -> 3.24.50-1"
+}

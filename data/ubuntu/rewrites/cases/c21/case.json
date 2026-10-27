@@ -1,0 +1,6 @@
+{
+ "id": "c21",
+ "package": "gnome-initial-setup",
+ "file": "debian/control",
+ "merge": "47.2-1 -> 48~rc-1"
+}

@@ -1,0 +1,25 @@
+dbus (1.16.2-4) unstable; urgency=medium
+
+  [ Luca Boccassi ]
+  * Use sysusers.d(5) and dh-sequence-installsysusers to create the
+    messagebus user (Mitigates: #1126595)
+  * Always recommend a reboot on upgrade, instead of checking whether at
+    least one dbus-daemon is running. In most cases it will be, and this
+    reduces complexity and avoids a call to pidof. (Helps: #851747)
+  * Consistently use /run/ instead of /var/run/ in dbus.postinst
+
+  [ Simon McVittie ]
+  * d/p/debian/tests-Skip-AppArmor-mediation-test-on-non-Ubuntu-kernels.patch:
+    Add a patch to skip the AppArmor mediation test for now. This test
+    was initially developed with Ubuntu's patched kernels in mind, and
+    doesn't appear to work with the version of dbus mediation that was
+    included in the upstream 6.17+ kernels, possibly requiring a newer
+    apparmor user-space to become effective. (Mitigates: #1128786)
+  * d/p/debian/tests-Multiply-timeouts-by-20-on-riscv64.patch:
+    Remove patch. Official riscv64 buildds are now real hardware rather
+    than qemu-system, with correspondingly better performance.
+  * d/clean, d/rules: Clean debian/tmp-udeb declaratively
+  * d/clean: Ensure all three build directories are deleted
+  * d/clean: Sort alphabetically
+  * d/control: Standards-Version: 4.7.3
+    - Remove Priority: optional, which is now implicit

@@ -1,0 +1,55 @@
+util-linux (2.41-4ubuntu4.2) questing-security; urgency=medium
+
+  * d/p/ubuntu/su-pty-drop-caps.patch: harden 'su --pty' to temporarily lower
+    capabilities while proxying between stdin/stdout and the pty master. This
+    is to avoid su from being used to exploit kernel vulnerabilities.
+
+ -- Luci Stanescu <luci.stanescu@canonical.com>  Fri, 06 Mar 2026 17:56:03 +0200
+
+util-linux (2.41-4ubuntu4.1) questing; urgency=medium
+
+  * Add ARM core support for Vera systems (LP: #2123886)
+    - d/p/ubuntu/lp-2123886-add-missing-arm-cores.patch
+
+ -- Zachary Raines <zachary.raines@canonical.com>  Mon, 22 Sep 2025 14:42:28 +0000
+
+util-linux (2.41-4ubuntu4) questing; urgency=medium
+
+  * Rebuild to include updated RISC-V base ISA RVA23
+
+ -- Heinrich Schuchardt <heinrich.schuchardt@canonical.com>  Sat, 06 Sep 2025 15:37:59 +0000
+
+util-linux (2.41-4ubuntu3) questing; urgency=medium
+
+  * lib/path: avoid double free() for cpusets (LP: #2115636)
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Wed, 02 Jul 2025 14:45:08 +0200
+
+util-linux (2.41-4ubuntu2) questing; urgency=medium
+
+  * Fix FTBFS (LP: #2112552)
+    Mark a test as "known fail" due to coreutils-from-uutils. This test is
+    skipped with coreutils-from-gnu anyway.
+    - d/p/u/lp-2112552-tests-mark-mkfds-multiplexing-as-known-fail.patch
+
+ -- Florent 'Skia' Jacquet <florent.jacquet@canonical.com>  Thu, 05 Jun 2025 12:19:26 +0200
+
+util-linux (2.41-4ubuntu1) questing; urgency=medium
+
+  * Merge with Debian unstable (LP: #2111830).
+    Nothing of note in this merge, just a trivial patch refresh.
+    Remaining changes:
+    - Add sulogin-fallback-static-sh.patch
+      Add support for /bin/static-sh as fallback if the regular shell fails to
+      execute. Patch ported from sysvinit. (see LP #505887)
+    - Add sulogin-lockedpwd.patch
+      Make sure file systems can be fixed on machines with locked root
+      accounts (as Ubuntu does by default). Don't require --force for sulogin.
+    - d/p/ubuntu/lp-2030793-make-check-pidfd.patch
+      Skip tests lsfd/column-name-pidfd,lsfd/mkfds-pidfd that fail when run
+      using the Focal kernel
+    - d/rules: disable libmount mountfs support
+      Disable brand new feature with --disable-libmount-mountfd-support that
+      causes inability to deploy MAAS LP #2037417.
+
+ -- Florent 'Skia' Jacquet <florent.jacquet@canonical.com>  Tue, 27 May 2025 17:24:32 +0200

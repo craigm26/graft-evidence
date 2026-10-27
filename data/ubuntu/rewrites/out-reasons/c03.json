@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Ubuntu patches (extrausers, pam_motd-legal-notice, security patches incl. pam_namespace_170 where 'pam_namespace_o_directory.patch: removed, included in patch cluster above') remain; Debian 1.5.3-7 only added ftbfs-implicit-function-declaration, which Ubuntu already carries ('Fix FTBFS ... implicit-function-declaration'), so the series equals Ubuntu's.",
+ "confidence": 0.8
+}

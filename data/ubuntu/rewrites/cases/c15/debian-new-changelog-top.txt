@@ -1,0 +1,11 @@
+util-linux (2.41.2-4) unstable; urgency=medium
+
+  * Install pivot_root into util-linux-extra.
+    Thanks to Antonio Ospite (Closes: #1117538)
+  * Ensure /var/lib/lastlog exists for pam_lastlog2.
+    Previously this was created by lastlog2-tmpfiles.conf, installed by the
+    lastlog2 package. But lastlog2 itself is optional and not stricly
+    necessary for libpam-lastlog2 to function. Install lastlog2-tmpfiles.conf
+    into libpam-lastlog2, and also have dpkg create the directory.
+    Thanks to Joachim Jautz (Closes: #1117725)
+  * Break older dracut for moved switch_root

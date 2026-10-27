@@ -1,0 +1,74 @@
+Source: gnome-initial-setup
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Jeremy Bícha <jbicha@ubuntu.com>, Laurent Bigonville <bigon@debian.org>, Marco Trevisan (Treviño) <marco@ubuntu.com>, Sebastien Bacher <seb128@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dconf-cli,
+               dh-sequence-gnome,
+               gsettings-desktop-schemas-dev (>= 3.37.1),
+               itstool,
+               libaccountsservice-dev,
+               libadwaita-1-dev (>= 1.2~alpha),
+               libfontconfig-dev,
+               libgdm-dev (>= 3.8.3),
+               libgeoclue-2-dev (>= 2.6.0),
+               libgeocode-glib-dev,
+               libglib2.0-dev (>= 2.63.1),
+               libgnome-desktop-4-dev,
+               libgoa-1.0-dev (>= 3.45.1),
+               libgoa-backend-1.0-dev (>= 3.45.1),
+               libgtk-4-dev (>= 4.10.0),
+               libgweather-4-dev (>= 4.1),
+               libibus-1.0-dev (>= 1.5.2),
+               libjson-glib-dev,
+               libkrb5-dev,
+               libmalcontent-ui-dev (>= 0.7.0) [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa loong64 powerpc ppc64 x32],
+               libnm-dev (>= 1.2),
+               libnma-gtk4-dev (>= 1.0),
+               libpango1.0-dev (>= 1.32.5),
+               libpolkit-gobject-1-dev (>= 0.103),
+               libpoppler-glib-dev,
+               libpwquality-dev,
+               libsecret-1-dev (>= 0.18.8),
+               libsnapd-glib-dev,
+               libsysmetrics-dev,
+               libsystemd-dev [linux-any],
+               libwebkitgtk-6.0-dev,
+               libxml2-utils,
+               meson (>= 0.50.0),
+               systemd-dev ( >= 242),
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+XS-Debian-Vcs-Git: https://salsa.debian.org/gnome-team/gnome-initial-setup.git
+XS-Debian-Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-initial-setup
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-initial-setup.git -b ubuntu/latest
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-initial-setup/tree/ubuntu/latest
+Homepage: https://git.gnome.org/browse/gnome-initial-setup/
+
+Package: gnome-initial-setup
+Architecture: linux-any
+Depends: ${shlibs:Depends},
+         pkexec (>= 0.103),
+         polkitd (>= 0.103),
+         tecla (>= 45~rc),
+         adduser,
+         gnome-settings-daemon (>= 3.24),
+         ${logo:Depends},
+         ${misc:Depends}
+Recommends: accountsservice,
+            geoclue-2.0 (>= 2.6.0),
+            gnome-keyring,
+            ${malcontent:Recommends}
+Suggests: gdm3,
+Description: Initial GNOME system setup helper
+ After acquiring or installing a new system there are a few essential things
+ to set up before use. GNOME Initial Setup aims to provide a simple, easy,
+ and safe way to prepare a new system.
+ .
+ GNOME Initial Setup runs the first time you log in to the GNOME desktop
+ and lets you easily configure your language, keyboard layout, online accounts
+ integration, and more.
+ .
+ If you want to configure these things at any other time, run the Settings app.

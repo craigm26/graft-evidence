@@ -1,0 +1,33 @@
+gnome-initial-setup (47.2-1ubuntu2) plucky; urgency=medium
+
+  * debian/patches/launchpad_translations_export.patch:
+    - export the current translations from launchpad and include them in
+      the source since we are opting out from langpacks there.
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 16 Dec 2024 16:28:23 +0100
+
+gnome-initial-setup (47.2-1ubuntu1) plucky; urgency=medium
+
+  * Merge with Debian. Remaining changes:
+    - d/control: Add Build-Depends:
+      + libsnapd-glib-dev
+      + libsysmetrics-dev
+      + libpoppler-glib-dev
+    - d/patches: Ubuntu-specific patches:
+      + reenable-existing-user-mode.patch
+      + 0001-Make-summary-page-explicitly-request-navigation-butt.patch
+      + 0001-Ensure-stamp-file-if-the-user-quit-the-wizard.patch
+      + 0001-Add-Ubuntu-mode-with-special-pages.patch
+      + 0001-Display-the-ubuntu-welcome-wizard-in-Unity.patch
+      + 0002-no-deprecation-warnings.patch
+      + 0008-Ubuntu-location-default.patch
+      + ubuntu-distributor-logo.patch
+      + Update-style-to-the-same-than-flutter-installer.patch
+      + Allow-setting-hostname-to-local-account-page.patch
+      + Do-not-skip-g-i-s-first-login-mode-after-user-creation.patch
+      + Skip-privacy-page-in-user-creation-setup.patch
+    - Temporarily ignore build test failures, the new test isn't compatible
+      with Ubuntu patches yet
+    - debian/vendor.conf: do not hide language page
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 06 Dec 2024 15:52:43 -0500

@@ -1,0 +1,39 @@
+shadow (1:4.15.3-3ubuntu2) oracular; urgency=medium
+
+  * d/p : disallow pure numeric user and group names (LP: #2076898)
+
+ -- Hector Cao <hector.cao@canonical.com>  Tue, 13 Aug 2024 12:15:06 +0200
+
+shadow (1:4.15.3-3ubuntu1) oracular; urgency=medium
+
+  * Merge with Debian unstable. Remaining changes (LP: #2073338):
+    - d/p/* : Enable private home directories by default
+    - debian/{source_shadow.py,login.install}: Add apport hook
+    - debian/patches/1010_extrausers.patch:
+      + Add support to passwd for libnss-extrausers
+      + Add automatic detection of "extrausers" for usermod -G
+    - d/p/1011_extrausers_toggle.patch: extrausers support for useradd/groupadd
+    - d/p/1012_extrausers_chfn.patch: --extrausers support for chfn tool
+      This patch has been refreshed to remove "implicit function declaration"
+      warning
+    - d/p/1013_extrausers_deluser.patch: --extrausers support for userdel
+    - d/p/1014_extrausers_delgroup.patch: --extrausers support for groupdel
+      This patch has been refreshed to remove "implicit function declaration"
+      warning
+    - d/p/1015_add_zsys_support.patch: zsys to handle home dir if available
+    - d/p/1016_extrausers_gpasswd.patch: extrausers support for gpasswd
+    - d/p/506_relaxed_usernames.patch, d/t/{control,numeric-username}:
+      + disallow purely numeric usernames
+        The patch has been integrated in debian but we still have to
+        keep the tests
+    - d/t/smoke: Extend for extrausers support
+    - Add some cursory tests for the extrausers features
+    - d/p/lp2063200: fix useradd group validation with extrausers (LP 2063200)
+
+    Dropped changes:
+    - debian/login.defs: Update documentation of USERGROUPS_ENAB/UMASK
+      Reason: Integrated upstream
+    - Fix ftbfs with -Werror=implicit-function-declaration
+      Reason: Integrated upstream
+
+ -- Hector Cao <hector.cao@canonical.com>  Mon, 29 Jul 2024 11:30:50 +0200

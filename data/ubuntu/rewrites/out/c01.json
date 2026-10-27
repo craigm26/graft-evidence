@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Debian 2.8.0 still runs the cryptdisks and cryptroot-sysvinit autopkgtests that Ubuntu disables for its CI, so the disabling is re-applied on top of Debian's new test definitions (including the new e2fsprogs dep in the commented block).", "confidence": 0.8}

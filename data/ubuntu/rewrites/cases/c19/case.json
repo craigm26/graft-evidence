@@ -1,0 +1,6 @@
+{
+ "id": "c19",
+ "package": "brltty",
+ "file": "debian/rules",
+ "merge": "6.7-1 -> 6.9.1+repack-1"
+}

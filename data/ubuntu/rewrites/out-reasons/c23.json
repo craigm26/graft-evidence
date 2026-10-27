@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "'Remaining changes: d/rules: switch to -O2 (from -O3) on ppc64el to fix FTBFS (LP #2121250)' is not in Debian so it is kept, while the decode2text.sh rm removal (CVE-2025-59031) is now in Debian's 2.4.4 rules.",
+ "confidence": 0.85
+}

@@ -1,0 +1,4 @@
+mutter (50~beta-2) experimental; urgency=medium
+
+  * Add loong64 to the list of architectures where sysprof is available
+  * Fix i386 build

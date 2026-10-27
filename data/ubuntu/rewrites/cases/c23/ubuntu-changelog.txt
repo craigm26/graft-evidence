@@ -1,0 +1,130 @@
+dovecot (1:2.4.2+dfsg1-3ubuntu4) stonking; urgency=medium
+
+  * No-change rebuild against libssl4
+
+ -- Ravi Kant Sharma <ravi.kant.sharma@canonical.com>  Fri, 24 Jul 2026 10:34:02 +0000
+
+dovecot (1:2.4.2+dfsg1-3ubuntu3) stonking; urgency=medium
+
+  * SECURITY UPDATE: safe filter issue when used with variable expansion
+    - debian/patches/CVE-2026-27851.patch: lib-var-expand: Reset safe state when
+      transfer is unset in src/lib-var-expand/test-var-expand.c, src/lib-var-
+      expand/var-expand.c.
+    - CVE-2026-27851
+  * SECURITY UPDATE: fake SCRAM TLS channel binding via crafted base64
+    - debian/patches/CVE-2026-33603.patch: login-common: Only accept base64 in
+      sasl in src/login-common/client-common-auth.c.
+    - CVE-2026-33603
+  * SECURITY UPDATE: CPU time limits bypass via sieve script
+    - debian/patches/CVE-2026-40016.patch: lib-sieve: Enforce CPU time limit
+      within :contains and :matches matcher loops in pigeonhole/src/lib-
+      sieve/mcht-contains.c, pigeonhole/src/lib-sieve/mcht-matches.c,
+      pigeonhole/src/lib-sieve/sieve-interpreter.c, pigeonhole/src/lib-
+      sieve/sieve-interpreter.h.
+    - CVE-2026-40016
+  * SECURITY UPDATE: permission injection via IMAP SETACL command
+    - debian/patches/CVE-2026-40020-pre1.patch: acl: Add acl_id_is_valid() in
+      src/plugins/acl/acl-rights.c, src/plugins/acl/acl-rights.h.
+    - debian/patches/CVE-2026-40020.patch: imap-acl: Fail if ACL identifier is
+      invalid in src/plugins/imap-acl/imap-acl-plugin.c.
+    - CVE-2026-40020
+  * SECURITY UPDATE: memory consumption via excessive bracing over IMAP
+    - debian/patches/CVE-2026-42006.patch: lib-imap: Fix
+      imap_parser_params.list_count_limit to actually work in src/lib-imap/imap-
+      parser.c, src/lib-imap/test-imap-parser.c.
+    - CVE-2026-42006
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 28 May 2026 15:37:54 -0400
+
+dovecot (1:2.4.2+dfsg1-3ubuntu2) resolute; urgency=medium
+
+  * SECURITY UPDATE: Improper input validation
+    - debian/patches/CVE-2025-59028.patch: [PATCH 01/24] auth: Don't
+    disconnect auth client when invalid base64 SASL input is received
+    - CVE-2025-59028
+  * SECURITY UPDATE: Exposure of Sensitive Information to an Unauthorized
+    Actor
+    - debian/patches/CVE-2025-59031.patch: [PATCH 02/24] fts: Remove
+    decode2text.sh
+    - debian/rules: Remove decode2text.sh from it.
+    - debian/dovecot-core.examples: Remove decode2text.sh from it.
+    - CVE-2025-59031
+  * SECURITY UPDATE: Improper Input Validation
+    - debian/patches/CVE-2025-59032.patch: managesieve-login: Fix crash
+    when command didn't finish on the first call
+    - CVE-2025-59032
+  * SECURITY UPDATE: SQL/LDAP Injection
+    - debian/patches/CVE-2026-24031-27860-1.patch: [PATCH 04/24] auth:
+    Make struct settings_get_params params const
+    - debian/patches/CVE-2026-24031-27860-2.patch: [PATCH 05/24] auth:
+    passdb/userdb ldap - Fix escaping ldap filter, base and bind_userdn
+    - debian/patches/CVE-2026-24031-27860-3.patch: [PATCH 06/24] lib-
+    settings: settings_get_params() - Fix using provided escape_func
+    - debian/patches/CVE-2026-24031-27860-4.patch: [PATCH 07/24] auth:
+    test-auth - Run Lua unit tests even when building Lua as plugin
+    - debian/patches/CVE-2026-24031-27860-5.patch: [PATCH 08/24] auth:
+    Rewrite ldap_escape() with a unit test
+    - debian/patches/CVE-2026-24031-27860-6.patch: [PATCH 09/24] auth:
+    passdb sql - Fix escaping for set_credentials()
+    - debian/patches/CVE-2026-24031-27860-7.patch: [PATCH 10/24] auth:
+    userdb sql - Fix escaping for user iteration
+    - debian/patches/CVE-2026-24031-27860-8.patch: [PATCH 11/24] lib-
+    var-expand: Add "safe" filter to prevent escaping output
+    - CVE-2026-24031
+    - CVE-2026-27860
+  * SECURITY UPDATE: Authentication Bypass
+    - debian/patches/CVE-2026-27855-1.patch: [PATCH 21/24] auth: cache -
+    Use translated username in auth_cache_remove()
+    - debian/patches/CVE-2026-27855-2.patch: [PATCH 22/24] auth: Move
+    passdb event lifecycle handling to
+    auth_request_passdb_event_(begin|end)
+    - debian/patches/CVE-2026-27855-3.patch: [PATCH 23/24] auth:
+    Initialize set_credentials event properly
+    - debian/patches/CVE-2026-27855-4.patch: [PATCH 24/24] auth: passdb-
+    sql - Require update_query to be set when used
+    - CVE-2026-27855
+  * SECURITY UPDATE: Improper Authentication
+    - debian/patches/CVE-2026-27856-1.patch: [PATCH 16/24] doveadm:
+    client-connection - Use timing safe credential check
+    - debian/patches/CVE-2026-27856-2.patch: [PATCH 17/24] doveadm: Use
+    datastack for temporary b64 value
+    - debian/patches/CVE-2026-27856-3.patch: [PATCH 18/24] doveadm:
+    client-connection - Get API key from per-connection settings
+    - CVE-2026-27856
+  * SECURITY UPDATE: Uncontrolled Resource Consumption
+    - debian/patches/CVE-2026-27857-1.patch: [PATCH 1/2] plugins: imap-
+    filter-sieve: imap-filter-sieve - Adjust to imap_parser_create() API
+    change
+    - debian/patches/CVE-2026-27857-2.patch: [PATCH 12/24] lib-imap,
+    global: Add params parameter to imap_parser_create()
+    - debian/patches/CVE-2026-27857-3.patch: [PATCH 13/24] lib-imap: Add
+    imap_parser_params.list_count_limit
+    - debian/patches/CVE-2026-27857-4.patch: [PATCH 14/24] imap-login:
+    Limit the number of open IMAP parser lists
+    - debian/patches/CVE-2026-27857-5.patch: [PATCH 15/24] global: Use
+    const for struct imap_parser_params params
+    - CVE-2026-27857
+  * SECURITY UPDATE: Uncontrolled Resource Consumption
+    - debian/patches/CVE-2026-27858.patch: [PATCH 2/2] managesieve-
+    login: Verify AUTHENTICATE initial response size isn't too large
+    - CVE-2026-27858
+  * SECURITY UPDATE: Uncontrolled Resource Consumption
+    - debian/patches/CVE-2026-27859.patch: [PATCH 03/24] lib-mail: Limit
+    the number of RFC2231 parameters that can be parsed
+    - CVE-2026-27859
+
+ -- Eduardo Barretto <eduardo.barretto@canonical.com>  Wed, 25 Mar 2026 15:54:34 +0100
+
+dovecot (1:2.4.2+dfsg1-3ubuntu1) resolute; urgency=medium
+
+  * Merge with Debian unstable (LP: #2126007). Remaining changes:
+    - d/rules: switch to -O2 (from -O3) on ppc64el to fix FTBFS (LP #2121250)
+  * Dropped changes:
+    - d/p/fips-pbkdf2-fix: update PBKDF2 salt length to be FIPS 140-3 compliant
+      [upstream in 2.4.2 dab49bf1222 and 5ebc1e3e560]
+    - d/rules: set mbranch-protection=bti to avoid ftbfs
+      [fixed in libunwind-1.8.2]
+    - d/p/CVE-2025-30189: fix auth by AUTH_CACHE_KEY_USER
+      [upstream in 2.4.2]
+
+ -- Jonas Jelten <jj@ubuntu.com>  Tue, 09 Feb 2026 09:40:39 +0100

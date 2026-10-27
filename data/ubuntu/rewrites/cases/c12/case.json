@@ -1,0 +1,6 @@
+{
+ "id": "c12",
+ "package": "shadow",
+ "file": "debian/patches/series",
+ "merge": "1:4.16.0-7 -> 1:4.17.4-2"
+}

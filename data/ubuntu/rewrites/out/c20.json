@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Only Ubuntu delta in debian/control is the Maintainer/XSBC-Original-Maintainer convention, which is reapplied on top of Debian's new control.", "confidence": 0.9}

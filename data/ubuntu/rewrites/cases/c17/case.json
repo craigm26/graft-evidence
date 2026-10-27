@@ -1,0 +1,6 @@
+{
+ "id": "c17",
+ "package": "cups",
+ "file": "debian/rules",
+ "merge": "2.4.7-1.2 -> 2.4.10-1"
+}

@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Kept the 1.5.3-7ubuntu1 'remaining changes' patches (pam_motd-legal-notice, ubuntu-rlimit_nice_correction, update-motd-manpage-ref, pam_umask_usergroups_from_login.defs, extrausers, pam_env deprecation notice) plus fix-pam_motd-ftbfs (ubuntu2); dropped the 1.5.3-7ubuntu6 pam_namespace/CVE-2025-6020 patches, which 1.7.0 and Debian's upstream/0020-pam_namespace-from-v1.7.1.patch now cover.",
+ "confidence": 0.65
+}

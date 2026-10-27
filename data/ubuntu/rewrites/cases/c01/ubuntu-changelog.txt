@@ -1,0 +1,25 @@
+cryptsetup (2:2.7.5-2ubuntu2) questing; urgency=medium
+
+  * Fix autopkgtest
+
+ -- Mate Kukri <mate.kukri@canonical.com>  Thu, 17 Jul 2025 14:02:28 +0100
+
+cryptsetup (2:2.7.5-2ubuntu1) questing; urgency=medium
+
+  * Merge with Debian unstable. Remaining changes:
+    - Support zstd compressed modules for the self test.
+    - Compile-in support for a FIPS mode. LP #2032659
+    - debian/{control,rules}:
+      + Recommend plymouth.
+      + Depend on busybox-initramfs instead of busybox | busybox-static.
+      + Move cryptsetup-initramfs back to cryptsetup's Recommends.
+      + Do not build cryptsetup-suspend binary package on i386.
+    - Fix cryptroot-unlock for busybox compatibility.
+    - Fix warning and error when running on ZFS on root
+      + d/functions: Return an empty devno for ZFS devices as they don't have
+        major:minor device numbers.
+      + d/initramfs/hooks/cryptroot: Ignore and don't print an error message
+        when devices don't have a devno.
+    - Fix cryptroot-unlock behavior on narrow terminals (LP #1968636)
+
+ -- Mate Kukri <mate.kukri@canonical.com>  Fri, 11 Jul 2025 14:25:05 +0100

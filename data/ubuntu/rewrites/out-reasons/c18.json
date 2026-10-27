@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Ubuntu's mutter delta remains ('Merge with Debian. Remaining changes: Add window-Add-ability-to-override-the-edge-constraints.patch'), so the control keeps the Ubuntu Maintainer/XSBC-Original-Maintainer and ubuntu/latest Vcs fields on top of Debian 50~beta-2.",
+ "confidence": 0.85
+}

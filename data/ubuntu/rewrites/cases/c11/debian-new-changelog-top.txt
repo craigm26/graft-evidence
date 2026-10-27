@@ -1,0 +1,3 @@
+pam (1.7.0-5) unstable; urgency=high
+
+  * pam_access: backport upstream commit to implement nodns option to allow people to work around #1087019

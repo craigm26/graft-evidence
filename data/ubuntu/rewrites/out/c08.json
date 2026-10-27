@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's extra md5sums for its historically shipped sshd_config variants are still needed for ucf upgrade handling; merge them with Debian's new 1:10.4p1-5 entry.", "confidence": 0.8}

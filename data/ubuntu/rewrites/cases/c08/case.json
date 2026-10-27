@@ -1,0 +1,6 @@
+{
+ "id": "c08",
+ "package": "openssh",
+ "file": "debian/openssh-server.ucf-md5sum",
+ "merge": "1:10.4p1-4 -> 1:10.4p1-5"
+}

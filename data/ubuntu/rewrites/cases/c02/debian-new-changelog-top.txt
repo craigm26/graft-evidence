@@ -1,0 +1,5 @@
+gnupg2 (2.4.8-4) unstable; urgency=medium
+
+  * Make OpenPGP compliance mode require a self-sig for each UID
+  * debian/watch: move to version 5
+  * Drop Rules-Requires-Root: no (now the default)

@@ -1,0 +1,13 @@
+dovecot (1:2.4.4+dfsg1-2) unstable; urgency=medium
+
+  [ Noah Meyerhans ]
+  * [d8ee54a] Add rpmsvc-proto to build-depends (Closes: #1130117)
+  * [a5aa505] replace dovecot-mysql with dovecot-mariadb (Closes: #1137297)
+  * [fc77cc8] add an autopkgtest for gssapi
+  * [b41535d] remove /etc/dovecot/private dpkg-statoverride on purge
+    (Closes: #1139630)
+
+  [ Florian Best ]
+  * [6c605dd] docs(conf): fix references to new placeholder format
+  * [0896294] docs(conf): remove trailing whitespace
+  * [03417d4] docs(conf): fix documentation about boolean plugin configuration

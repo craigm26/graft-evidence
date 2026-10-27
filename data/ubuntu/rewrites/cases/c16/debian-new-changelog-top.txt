@@ -1,0 +1,7 @@
+bash (5.3-1) unstable; urgency=medium
+
+  * New upstream release 5.3.
+  * Apply upstream patches 001 - 003.
+  * clear_console: Handle screen and screen.* TERM envvar.
+  * bashrc: Avoid a command-not-found lookup stat (Ville Skyttä).
+    Closes: #1015216.

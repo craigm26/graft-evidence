@@ -1,0 +1,1 @@
+{"decision": "drop", "absent": false, "reason": "Ubuntu's CVE-2025-5994 and CVE-2025-11411 patches are included in upstream 1.24.2, and the FTBFS fix is superseded by Debian's replace-deprecated-function-by-new-action.patch, so Debian's series is used as-is.", "confidence": 0.85}

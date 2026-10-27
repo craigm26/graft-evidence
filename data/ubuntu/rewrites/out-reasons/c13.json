@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Remaining change 'd/EDITME.exim4-heavy.diff: disable support for libspf2' (LP #1952738, libspf2-dev only in universe) still applies; Debian 4.99.4-1 still enables SUPPORT_SPF, so the SPF hunk is removed from the refreshed diff.", "confidence": 0.85}

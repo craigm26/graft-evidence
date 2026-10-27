@@ -1,0 +1,49 @@
+exim4 (4.99.1-1ubuntu2) stonking; urgency=medium
+
+  * SECURITY UPDATE: information disclosure in PROXYv2 (LP: #2154366)
+    - debian/patches/202605191-security.patch: Security: fix PROXYv2
+      uninitialised-stack disclosure (EXIM-Security-2026-05-16.1) in
+      src/proxy.c.
+    - CVE number pending
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 27 May 2026 10:15:24 -0400
+
+exim4 (4.99.1-1ubuntu1.2) resolute-security; urgency=medium
+
+  * SECURITY UPDATE: one-byte write into freed buffer (LP: #2152202)
+    - debian/patches/202605011-security.patch: TLS: on rxd close with CHUNKING
+      active, clean the input processing stack in src/functions.h,
+      src/smtp_in.c, src/tls-gnu.c, src/tls-openssl.c.
+    - unknown
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 11 May 2026 18:50:06 +0200
+
+exim4 (4.99.1-1ubuntu1.1) resolute-security; urgency=medium
+
+  * SECURITY UPDATE: Multiple security issues
+    - debian/patches/CVE-2026-4068x.patch: backported upstream fix.
+    - CVE-2026-40685 - Possible OOB read/write on corrupt JSON in header
+    - CVE-2026-40686 - Possible OOB read with large UTF8 trailing chars
+    - CVE-2026-40687 - Possible OOB read/write with SPA authenticator
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 29 Apr 2026 12:42:33 -0400
+
+exim4 (4.99.1-1ubuntu1) resolute; urgency=medium
+
+  * Merge with Debian unstable (LP: #2137544). Remaining changes:
+    - Show Ubuntu distribution in SMTP banner
+      + d/p/fix_smtp_banner.patch: Show Ubuntu distribution
+        in SMTP banner.
+      + d/control: Build-Depends on lsb-release to detect Distribution.
+    - Disable external SPF support to avoid Build-Depends on libspf2-dev
+      (only available in universe). SPF can still be implemented via
+      spf-tools-perl, as documented in exim4.conf.template. This reverts
+      Vcs-Git commit 494f1fe, first released in 4.95~RC0-1.
+      (LP #1952738)
+      + d/control: drop Build-Depends on libspf2-dev.
+      + d/EDITME.exim4-heavy.diff: disable support for libspf2.
+      + d/d/c/a/30_exim4-config_check_rcpt: restore SPF logic based
+        on spfquery.mail-spf-perl from spf-tools-perl, but without
+        the previously supported helo detection.
+
+ -- Renan Rodrigo <rr@ubuntu.com>  Tue, 06 Jan 2026 09:21:12 -0300

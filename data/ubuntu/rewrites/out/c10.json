@@ -1,0 +1,1 @@
+{"decision": "drop", "absent": false, "reason": "This is a generated autotools Makefile.in from the upstream tarball with no Ubuntu-specific change; the only difference is the new upstream version, so take Debian's new file.", "confidence": 0.85}

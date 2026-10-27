@@ -1,0 +1,637 @@
+{
+ "systemd": {
+  "fedora_name": "systemd",
+  "fedora_patches": 4,
+  "debian_patches": 0,
+  "ubuntu_delta_patches": 4,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 0
+ },
+ "libvirt": {
+  "fedora_name": "libvirt",
+  "fedora_patches": 0,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 22,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 5
+ },
+ "binutils": {
+  "fedora_name": "binutils",
+  "fedora_patches": 25,
+  "debian_patches": 27,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 26
+ },
+ "samba": {
+  "fedora_name": "samba",
+  "fedora_patches": 0,
+  "debian_patches": 30,
+  "ubuntu_delta_patches": 1,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 25
+ },
+ "grub2": {
+  "fedora_name": "grub2",
+  "fedora_patches": 455,
+  "debian_patches": 68,
+  "ubuntu_delta_patches": 42,
+  "ubuntu_shared_fedora": [
+   "debian/patches/rhboot-f34-dont-use-int-for-efi-status.patch",
+   "debian/patches/rhboot-f34-make-exit-take-a-return-code.patch",
+   "debian/patches/suse-grub.texi-add-net_bootp6-document.patch"
+  ],
+  "ubuntu_shared_debian": [
+   "debian/patches/ubuntu-install-signed.patch"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/network/add-fw_path-variable-to-detect-config-file-on-efi.patch",
+   "debian/patches/network/bootp-new-net_bootp6-command.patch",
+   "debian/patches/network/discover-the-device-to-read-the-config-from-as-fallback.patch",
+   "debian/patches/network/efi-http-enclose-literal-ipv6-addresses-in-square-br.patch",
+   "debian/patches/network/efi-http-match-protocol-hostname-of-boot-url-in-root.patch",
+   "debian/patches/network/efinet-Configure-network-from-UEFI-device-path.patch",
+   "debian/patches/network/efinet-add-structures-for-PXE-messages.patch",
+   "debian/patches/network/efinet-also-use-the-firmware-acceleration-for-http.patch",
+   "debian/patches/network/efinet-set-dns-from-uefi-proto.patch",
+   "debian/patches/network/http-prepend-prefix-when-the-http-path-is-relative.patch",
+   "debian/patches/network/rhboot-http-message-field-size.patch",
+   "debian/patches/network/support-uefi-networking-protocols.patch",
+   "debian/patches/network/use-fw_path-prefix-when-fallback-searching-for-grub-config.patch"
+  ],
+  "debian_with_hunks": 65
+ },
+ "apache2": {
+  "fedora_name": "httpd",
+  "fedora_patches": 16,
+  "debian_patches": 14,
+  "ubuntu_delta_patches": 16,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 14
+ },
+ "curl": {
+  "fedora_name": "curl",
+  "fedora_patches": 1,
+  "debian_patches": 4,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 4
+ },
+ "xorg-server": {
+  "fedora_name": "xorg-x11-server",
+  "fedora_patches": 7,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 16,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [
+   "debian/patches/06_use-intel-only-on-pre-gen4.diff"
+  ],
+  "debian_with_hunks": 3
+ },
+ "bind9": {
+  "fedora_name": "bind",
+  "fedora_patches": 15,
+  "debian_patches": 2,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "mesa": {
+  "fedora_name": "mesa",
+  "fedora_patches": 0,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 2
+ },
+ "openssh": {
+  "fedora_name": "openssh",
+  "fedora_patches": 53,
+  "debian_patches": 22,
+  "ubuntu_delta_patches": 5,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/debian-config.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 18
+ },
+ "util-linux": {
+  "fedora_name": "util-linux",
+  "fedora_patches": 2,
+  "debian_patches": 10,
+  "ubuntu_delta_patches": 13,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 9
+ },
+ "cups": {
+  "fedora_name": "cups",
+  "fedora_patches": 15,
+  "debian_patches": 13,
+  "ubuntu_delta_patches": 6,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 12
+ },
+ "dovecot": {
+  "fedora_name": "dovecot",
+  "fedora_patches": 20,
+  "debian_patches": 9,
+  "ubuntu_delta_patches": 31,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [
+   "debian/patches/work-around-test-failure-on-big-endian-architectures.patch"
+  ],
+  "debian_with_hunks": 8
+ },
+ "mutter": {
+  "fedora_name": "mutter",
+  "fedora_patches": 1,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 8,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 5
+ },
+ "gst-plugins-bad1.0": {
+  "fedora_name": "gstreamer1-plugins-bad-free",
+  "fedora_patches": 1,
+  "debian_patches": 7,
+  "ubuntu_delta_patches": 5,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/0001_meson-vmaf_dep-missing-variable.patch",
+   "debian/patches/Skip-failing-tests-big-endian.patch",
+   "debian/patches/Skip-failing-tests-riscv64.patch",
+   "debian/patches/Skip-failing-tests.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 7
+ },
+ "exim4": {
+  "fedora_name": "exim",
+  "fedora_patches": 4,
+  "debian_patches": 31,
+  "ubuntu_delta_patches": 4,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [
+   "debian/patches/90_localscan_dlopen.patch"
+  ],
+  "debian_with_hunks": 31
+ },
+ "nginx": {
+  "fedora_name": "nginx",
+  "fedora_patches": 5,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [
+   "debian/patches/nginx-fix-pidfile.patch"
+  ],
+  "debian_with_hunks": 5
+ },
+ "pam": {
+  "fedora_name": "pam",
+  "fedora_patches": 4,
+  "debian_patches": 24,
+  "ubuntu_delta_patches": 27,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/031_pam_include",
+   "debian/patches/CVE-2025-6020-1.patch",
+   "debian/patches/pam_namespace_post170-01.patch",
+   "debian/patches/pam_namespace_post170-08.patch",
+   "debian/patches/pam_namespace_post170-09.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 24
+ },
+ "gnome-control-center": {
+  "fedora_name": "gnome-control-center",
+  "fedora_patches": 0,
+  "debian_patches": 7,
+  "ubuntu_delta_patches": 32,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/debian/keyboard-Set-debian-keyboard-config.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 7
+ },
+ "dbus": {
+  "fedora_name": "dbus",
+  "fedora_patches": 1,
+  "debian_patches": 2,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 2
+ },
+ "sudo": {
+  "fedora_name": "sudo",
+  "fedora_patches": 3,
+  "debian_patches": 6,
+  "ubuntu_delta_patches": 9,
+  "ubuntu_shared_fedora": [
+   "debian/patches/lp2143042.patch"
+  ],
+  "ubuntu_shared_debian": [
+   "debian/patches/lp2143042.patch"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/0006-exec_mailer-Set-group-as-well-as-uid-when-running-th.patch"
+  ],
+  "debian_with_hunks": 5
+ },
+ "tiff": {
+  "fedora_name": "libtiff",
+  "fedora_patches": 0,
+  "debian_patches": 1,
+  "ubuntu_delta_patches": 8,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "openldap": {
+  "fedora_name": "openldap",
+  "fedora_patches": 16,
+  "debian_patches": 18,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [
+   "debian/patches/switch-to-lt_dlopenadvise-to-get-RTLD_GLOBAL-set.diff"
+  ],
+  "debian_with_hunks": 18
+ },
+ "gnome-shell": {
+  "fedora_name": "gnome-shell",
+  "fedora_patches": 1,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 72,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/debian/Revert-tests-Fail-on-warnings-too.patch",
+   "debian/patches/shell-app-Warn-instead-of-crashing-if-disposed-before-sta.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 2
+ },
+ "multipath-tools": {
+  "fedora_name": "device-mapper-multipath",
+  "fedora_patches": 13,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 3
+ },
+ "poppler": {
+  "fedora_name": "poppler",
+  "fedora_patches": 2,
+  "debian_patches": 0,
+  "ubuntu_delta_patches": 7,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 0
+ },
+ "cryptsetup": {
+  "fedora_name": "cryptsetup",
+  "fedora_patches": 0,
+  "debian_patches": 1,
+  "ubuntu_delta_patches": 4,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "net-snmp": {
+  "fedora_name": "net-snmp",
+  "fedora_patches": 25,
+  "debian_patches": 44,
+  "ubuntu_delta_patches": 3,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 44
+ },
+ "sssd": {
+  "fedora_name": "sssd",
+  "fedora_patches": 4,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/fix-ding-libs-ftbfs.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 2
+ },
+ "openvpn": {
+  "fedora_name": "openvpn",
+  "fedora_patches": 4,
+  "debian_patches": 4,
+  "ubuntu_delta_patches": 3,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 4
+ },
+ "nfs-utils": {
+  "fedora_name": "nfs-utils",
+  "fedora_patches": 15,
+  "debian_patches": 2,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "brltty": {
+  "fedora_name": "brltty",
+  "fedora_patches": 2,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 5
+ },
+ "gtk+3.0": {
+  "fedora_name": "gtk3",
+  "fedora_patches": 2,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 13,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 5
+ },
+ "gnupg2": {
+  "fedora_name": "gnupg2",
+  "fedora_patches": 21,
+  "debian_patches": 55,
+  "ubuntu_delta_patches": 4,
+  "ubuntu_shared_fedora": [
+   "debian/patches/CVE-2026-24882.patch"
+  ],
+  "ubuntu_shared_debian": [
+   "debian/patches/CVE-2026-24882.patch"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/freepg/0002-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch",
+   "debian/patches/freepg/0003-gpg-allow-import-of-previously-known-keys-even-witho.patch",
+   "debian/patches/freepg/0004-tests-add-test-cases-for-import-without-uid.patch",
+   "debian/patches/freepg/0005-gpg-drop-import-clean-from-default-keyserver-import-.patch",
+   "debian/patches/freepg/0008-avoid-systemd-deprecation-warning.patch",
+   "debian/patches/freepg/0009-Add-systemd-support-for-keyboxd.patch",
+   "debian/patches/freepg/0010-Ship-sample-systemd-unit-files.patch",
+   "debian/patches/freepg/0011-el-gamal-default-to-3072-bits.patch",
+   "debian/patches/freepg/0012-gpg-default-digest-algorithm-SHA512.patch",
+   "debian/patches/freepg/0013-gpg-Prefer-SHA-512-and-SHA-384-in-personal-digest.patch",
+   "debian/patches/freepg/0018-Avoid-simple-memory-dumps-via-ptrace.patch",
+   "debian/patches/freepg/0029-Add-keyboxd-systemd-support.patch",
+   "debian/patches/freepg/0033-Support-large-RSA-keygen-in-non-batch-mode.patch",
+   "debian/patches/from-24/0004-tpm-Fix-possible-buffer-overflow-in-PKDECRYPT.patch"
+  ],
+  "debian_with_hunks": 53
+ },
+ "shadow": {
+  "fedora_name": "shadow-utils",
+  "fedora_patches": 1,
+  "debian_patches": 11,
+  "ubuntu_delta_patches": 10,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 11
+ },
+ "open-iscsi": {
+  "fedora_name": "iscsi-initiator-utils",
+  "fedora_patches": 15,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 0,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 3
+ },
+ "procps": {
+  "fedora_name": "procps-ng",
+  "fedora_patches": 1,
+  "debian_patches": 9,
+  "ubuntu_delta_patches": 5,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 8
+ },
+ "freetype": {
+  "fedora_name": "freetype",
+  "fedora_patches": 5,
+  "debian_patches": 5,
+  "ubuntu_delta_patches": 2,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/CVE-2026-50811-1.patch",
+   "debian/patches/CVE-2026-50811-2.patch"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/enable-gxvalid-otvalid.patch",
+   "debian/patches/ftoption.patch"
+  ],
+  "debian_with_hunks": 5
+ },
+ "strongswan": {
+  "fedora_name": "strongswan",
+  "fedora_patches": 6,
+  "debian_patches": 4,
+  "ubuntu_delta_patches": 9,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 4
+ },
+ "hplip": {
+  "fedora_name": "hplip",
+  "fedora_patches": 79,
+  "debian_patches": 83,
+  "ubuntu_delta_patches": 1,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/0075-py3.8-Assume-the-python3-distro-package-is-available.patch"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/0001-models.dat-Fix-scanning-with-M281fdw-LaserJet.patch",
+   "debian/patches/0003-models.dat-Re-add-drivers-missing-from-3.19.1.patch",
+   "debian/patches/0004-models.dat-3.20.6-regression-take-3.20.5-s-plugin-1-.patch",
+   "debian/patches/0005-Cope-with-prnt-hpcups-ErnieFilter.-cpp-h-removal-by-.patch",
+   "debian/patches/0012-Treat-logging-before-importing-of-logger-module.patch",
+   "debian/patches/0026-Fix-handling-of-unicode-filenames-in-sixext.py.patch",
+   "debian/patches/0028-Remove-ImageProcessor-binary-installs.patch",
+   "debian/patches/0029-Call-QMessageBox-constructors-of-PyQT5-with-the-corr.patch",
+   "debian/patches/0030-Fixed-incomplete-removal-of-hp-toolbox-features-whic.patch",
+   "debian/patches/0043-Fix-strstr-const.patch",
+   "debian/patches/0044-Added-several-IEEE-1284-Device-IDs.patch",
+   "debian/patches/0045-Retry-when-connecting-to-device-fails.patch",
+   "debian/patches/0046-Mark-SNMP-quirks-for-two-lying-devices.patch",
+   "debian/patches/0047-Fix-bogus-low-ink-warning-from-hpijs-driver.patch",
+   "debian/patches/0048-Clear-old-state-reasons.patch",
+   "debian/patches/0049-Avoid-busy-loop-in-hpcups-when-backend-has-exited.patch",
+   "debian/patches/0050-CUPS-filters-should-use-TMPDIR-when-available.patch",
+   "debian/patches/0051-Fixed-Device-ID-parsing-code-in-hpijs-s-dj9xxvip.c.patch",
+   "debian/patches/0053-Fix-ImageableArea-for-Laserjet-8150-9000.patch",
+   "debian/patches/0054-Fix-parsing-of-avahi-daemon-output.patch",
+   "debian/patches/0055-Fixed-left-right-margins-for-HP-DeskJet-990C.patch",
+   "debian/patches/0056-Fixed-uses-of-strncpy-throughout.patch",
+   "debian/patches/0057-Ignore-IOError-when-logging-output.patch",
+   "debian/patches/0060-hp-firmware-NameError-name-INTERACTIVE_MODE4-is-not-.patch",
+   "debian/patches/0061-hp-setup-fails-on-fax-setup-use-binary-strings.patch",
+   "debian/patches/0063-Fix-TypeError-in-hpfax.patch",
+   "debian/patches/0064-Fix-AttributeError-when-connecting-to-printer-via-wi.patch",
+   "debian/patches/0066-Ignore-symlinks-when-installing-plugins.patch",
+   "debian/patches/0067-Scanning-broken-for-HP-LaserJet-3052.patch",
+   "debian/patches/0068-Fixed-hpcups-crash-when-required-plugin-missing.patch",
+   "debian/patches/0069-Fixing-issues-found-by-coverity-scan.patch",
+   "debian/patches/0070-abrt-hplip-strlen-hp-killed-by-SIGSEGV.patch",
+   "debian/patches/0071-abrt-hp-systray-BlockingIOError-Errno-11-Resource-te.patch"
+  ],
+  "debian_with_hunks": 80
+ },
+ "bash": {
+  "fedora_name": "bash",
+  "fedora_patches": 41,
+  "debian_patches": 29,
+  "ubuntu_delta_patches": 1,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/deb-bash-config.diff"
+  ],
+  "debian_shared_fedora": [
+   "debian/patches/bash53-001.diff",
+   "debian/patches/bash53-002.diff",
+   "debian/patches/bash53-004.diff",
+   "debian/patches/bash53-005.diff",
+   "debian/patches/bash53-006.diff",
+   "debian/patches/bash53-007.diff",
+   "debian/patches/bash53-008.diff",
+   "debian/patches/bash53-009.diff"
+  ],
+  "debian_with_hunks": 28
+ },
+ "rhythmbox": {
+  "fedora_name": "rhythmbox",
+  "fedora_patches": 0,
+  "debian_patches": 3,
+  "ubuntu_delta_patches": 7,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 3
+ },
+ "unbound": {
+  "fedora_name": "unbound",
+  "fedora_patches": 10,
+  "debian_patches": 1,
+  "ubuntu_delta_patches": 12,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "gnome-initial-setup": {
+  "fedora_name": "gnome-initial-setup",
+  "fedora_patches": 0,
+  "debian_patches": 0,
+  "ubuntu_delta_patches": 15,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 0
+ },
+ "alsa-utils": {
+  "fedora_name": "alsa-utils",
+  "fedora_patches": 1,
+  "debian_patches": 8,
+  "ubuntu_delta_patches": 3,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 6
+ },
+ "gnome-settings-daemon": {
+  "fedora_name": "gnome-settings-daemon",
+  "fedora_patches": 0,
+  "debian_patches": 1,
+  "ubuntu_delta_patches": 7,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 1
+ },
+ "pacemaker": {
+  "fedora_name": "pacemaker",
+  "fedora_patches": 1,
+  "debian_patches": 8,
+  "ubuntu_delta_patches": 3,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 8
+ },
+ "plymouth": {
+  "fedora_name": "plymouth",
+  "fedora_patches": 2,
+  "debian_patches": 6,
+  "ubuntu_delta_patches": 16,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/drop-systemd-vconsole-setup-service.patch",
+   "debian/patches/fallback-etc-default-keyboard.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 4
+ },
+ "gdm3": {
+  "fedora_name": "gdm",
+  "fedora_patches": 3,
+  "debian_patches": 10,
+  "ubuntu_delta_patches": 10,
+  "ubuntu_shared_fedora": [],
+  "ubuntu_shared_debian": [
+   "debian/patches/ubuntu/XSession-Use-x-terminal-emulator-as-fallback-instead-of-x.patch",
+   "debian/patches/ubuntu/run_xsession.d.patch",
+   "debian/patches/ubuntu/xresources_is_a_dir.patch"
+  ],
+  "debian_shared_fedora": [],
+  "debian_with_hunks": 10
+ }
+}

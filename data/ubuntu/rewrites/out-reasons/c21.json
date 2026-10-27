@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "'Remaining changes: d/control: Add Build-Depends: libsnapd-glib-dev, libsysmetrics-dev, libpoppler-glib-dev' are not in Debian 48~rc-1, so they are kept along with the Ubuntu Maintainer and ubuntu/latest Vcs fields.",
+ "confidence": 0.85
+}

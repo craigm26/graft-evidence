@@ -1,0 +1,29 @@
+xorg-server (2:21.1.22-1ubuntu4) stonking; urgency=medium
+
+  * Fix two SIGSEGV crashes on runtime GPU-screen (DisplayLink/evdi)
+    hotplug of modesetting platform-GPU screens (LP: #2160643): DGA
+    defaults on hotplug-added GPU screens (cherry-pick dbcd36b, MR
+    !2244) and NULL-guard the udev fallback bus-id subsystem lookup
+    (cherry-pick 9babe7e7, MR !2245).
+
+ -- Gary T. Giesen <ggiesen@giesen.me>  Tue, 14 Jul 2026 15:13:45 -0400
+
+xorg-server (2:21.1.22-1ubuntu3) stonking; urgency=medium
+
+  * Update boot_display patch for another case that had a problem.
+    (LP: #2136140)
+
+ -- Mario Limonciello <superm1@debian.org>  Mon, 29 Jun 2026 10:40:12 -0500
+
+xorg-server (2:21.1.22-1ubuntu2) stonking; urgency=medium
+
+  * Backport a patch from upstream to use boot_display.
+    (LP: #2136140)
+
+ -- Mario Limonciello <superm1@debian.org>  Fri, 12 Jun 2026 07:28:45 -0500
+
+xorg-server (2:21.1.22-1ubuntu1) resolute; urgency=medium
+
+  * Merge from Debian.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 15 Apr 2026 12:50:31 +0300

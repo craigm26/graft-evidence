@@ -1,0 +1,1 @@
+{"decision": "drop", "absent": true, "reason": "Debian 4.16 no longer builds the login binary package from shadow (login.install removed), so the apport hook install line cannot live in this file; it would need relocating (e.g. to passwd.install) rather than carried here.", "confidence": 0.75}

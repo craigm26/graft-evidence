@@ -1,0 +1,6 @@
+{
+ "id": "c11",
+ "package": "pam",
+ "file": "debian/patches/series",
+ "merge": "1.5.3-7 -> 1.7.0-5"
+}

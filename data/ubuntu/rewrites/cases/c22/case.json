@@ -1,0 +1,6 @@
+{
+ "id": "c22",
+ "package": "unbound",
+ "file": "debian/patches/series",
+ "merge": "1.22.0-2 -> 1.24.2-1"
+}

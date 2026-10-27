@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu patches (sulogin-fallback-static-sh, sulogin-lockedpwd, lp-2030793, lp-2112552, lp-2123886 ARM cores, su-pty-drop-caps) remain needed; 'lib/path: avoid double free() for cpusets (LP: #2115636)' is an upstream fix included in 2.41.2 and is dropped.", "confidence": 0.6}

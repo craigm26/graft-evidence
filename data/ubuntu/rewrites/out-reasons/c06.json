@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Ubuntu changelog 3.24.49-3ubuntu1 'Remaining changes: Ubuntu-specific patches' (073_treeview_almost_fixed ... gitlab_opengl_fallback) are still carried, so they are appended to Debian's new series, which dropped upstreamed patches and added the Cantarell workaround.",
+ "confidence": 0.8
+}

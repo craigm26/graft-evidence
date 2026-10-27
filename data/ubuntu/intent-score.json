@@ -1,0 +1,22 @@
+{
+ "files": 3459,
+ "before": {
+  "alone": 2070,
+  "alone_wrong": 268,
+  "person": 1389
+ },
+ "after": {
+  "alone": 1916,
+  "alone_wrong": 236,
+  "person": 1543
+ },
+ "propose_drop": {
+  "n": 525,
+  "ubuntu_dropped": 327,
+  "from_intent": 349
+ },
+ "ubuntu_drops": 675,
+ "ubuntu_drops_proposed": 327,
+ "conflicts_dropped_by_ubuntu": 45,
+ "of_those_proposed_by_intent": 0
+}

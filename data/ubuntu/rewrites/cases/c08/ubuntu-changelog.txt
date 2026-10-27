@@ -1,0 +1,45 @@
+openssh (1:10.4p1-4ubuntu2) stonking; urgency=medium
+
+  * d/rules: only act on files from bin:openssh-tests if it's being
+    built (LP: #2165026)
+
+ -- Andreas Hasenack <andreas.hasenack@canonical.com>  Tue, 25 Aug 2026 09:19:48 -0300
+
+openssh (1:10.4p1-4ubuntu1) stonking; urgency=medium
+
+  * Merge with Debian unstable (LP: #2164221). Remaining changes:
+    - debian/rules: modify dh_installsystemd invocations for
+      socket-activated sshd
+    - debian/README.Debian: document systemd socket activation.
+    - debian/.gitignore: drop file
+    - debian/openssh-server.ucf-md5sum: update for Ubuntu delta
+    - d/p/systemd-socket-activation.patch:
+      + Fix sshd re-execution behavior when socket activation is used
+      + Adapt sshd-session and sshd-auth for systemd socket activation
+      + Allow AF_VSOCK sockets
+    - debian/tests/systemd-socket-activation: Add autopkgtest for systemd socket
+      activation functionality.
+    - debian/patches: Immediately report interactive instructions to PAM clients
+    - debian/control: Build-Depends: systemd-dev
+    - d/p/sshd-socket-generator.patch: add generator for socket activation
+    - debian/openssh-server.install: install sshd-socket-generator
+    - debian/openssh-server.postinst: restart whichever systemd unit is enabled
+    - d/t/sshd-socket-generator: add dep8 test for sshd-socket-generator
+    - ssh.socket: adjust unit for socket activation by default
+    - debian/rules: explicitly enable LTO
+    - d/t/ssh-gssapi: disable -e in cleanup()
+    - d/p/test-set-UsePAM-no-on-some-tests.patch: set UsePAM=no for some tests
+    - d/openssh-server.links: add full sshd.service -> ssh.service alias
+      (LP #2087949)
+    - document /etc/ssh/sshd_config.d/*.conf better in sshd_config
+      (LP #2088207)
+    - d/rules,d/control: do not build with wtmpdb support
+    - d/t/control: add breaks-testbed restriction to tests
+    - d/tests: do not fail when $HOME/.ssh exists
+    - test: workaround test failure caused by uutils dd (LP #2125943)
+  * Added:
+    - d/t/password-auth-no-pam: create the privilege separation
+      directory manually for this test, as it doesn't use the systemd
+      service unit to start sshd
+
+ -- Andreas Hasenack <andreas.hasenack@canonical.com>  Wed, 19 Aug 2026 17:34:01 -0300

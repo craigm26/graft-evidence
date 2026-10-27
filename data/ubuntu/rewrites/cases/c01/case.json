@@ -1,0 +1,6 @@
+{
+ "id": "c01",
+ "package": "cryptsetup",
+ "file": "debian/tests/control",
+ "merge": "2:2.7.5-2 -> 2:2.8.0-1"
+}

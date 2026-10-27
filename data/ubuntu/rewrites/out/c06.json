@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu-specific patches (Unity, custom menu items, x-canonical-accel, etc.) are not upstreamed or in Debian; append them to Debian's new series, which already drops the upstreamed patches.", "confidence": 0.85}

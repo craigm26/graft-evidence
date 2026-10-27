@@ -1,0 +1,6 @@
+pam (1.5.3-7) unstable; urgency=medium
+
+  * Correct Build depends for docbook5, Closes: #1065064
+  * Regenerate patches to capture date change in pam_getitem.3
+  * Depend on libdb-dev again, bringing back pam_userdb, Closes: #1065088
+  * Document pam_umask change, Closes: #1065806

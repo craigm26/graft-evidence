@@ -1,0 +1,194 @@
+[
+ {
+  "id": "c00",
+  "pkg": "shadow",
+  "file": "debian/login.install",
+  "merge": "1:4.15.3-3 -> 1:4.16.0-7",
+  "human": "dropped",
+  "h_absent": true
+ },
+ {
+  "id": "c01",
+  "pkg": "cryptsetup",
+  "file": "debian/tests/control",
+  "merge": "2:2.7.5-2 -> 2:2.8.0-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c02",
+  "pkg": "gnupg2",
+  "file": "debian/control",
+  "merge": "2.4.8-2 -> 2.4.8-4",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c03",
+  "pkg": "pam",
+  "file": "debian/patches/series",
+  "merge": "1.5.3-5 -> 1.5.3-7",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c04",
+  "pkg": "systemd",
+  "file": "debian/control",
+  "merge": "261-1 -> 261.1-2",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c05",
+  "pkg": "brltty",
+  "file": "debian/brltty.dirs",
+  "merge": "6.7-1 -> 6.9.1+repack-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c06",
+  "pkg": "gtk+3.0",
+  "file": "debian/patches/series",
+  "merge": "3.24.49-3 -> 3.24.50-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c07",
+  "pkg": "dbus",
+  "file": "debian/patches/series",
+  "merge": "1.16.2-2 -> 1.16.2-4",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c08",
+  "pkg": "openssh",
+  "file": "debian/openssh-server.ucf-md5sum",
+  "merge": "1:10.4p1-4 -> 1:10.4p1-5",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c09",
+  "pkg": "gdm3",
+  "file": "debian/gdm3.postrm",
+  "merge": "48.0-1 -> 49.0.1-1",
+  "human": "dropped",
+  "h_absent": false
+ },
+ {
+  "id": "c10",
+  "pkg": "xorg-server",
+  "file": "hw/xquartz/GL/Makefile.in",
+  "merge": "2:21.1.22-1 -> 2:21.1.24-1",
+  "human": "dropped",
+  "h_absent": false
+ },
+ {
+  "id": "c11",
+  "pkg": "pam",
+  "file": "debian/patches/series",
+  "merge": "1.5.3-7 -> 1.7.0-5",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c12",
+  "pkg": "shadow",
+  "file": "debian/patches/series",
+  "merge": "1:4.16.0-7 -> 1:4.17.4-2",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c13",
+  "pkg": "exim4",
+  "file": "debian/EDITME.exim4-heavy.diff",
+  "merge": "4.99.1-1 -> 4.99.4-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c14",
+  "pkg": "sssd",
+  "file": "debian/control",
+  "merge": "2.12.0-1 -> 2.12.0-4",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c15",
+  "pkg": "util-linux",
+  "file": "debian/patches/series",
+  "merge": "2.41-4 -> 2.41.2-4",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c16",
+  "pkg": "bash",
+  "file": "debian/etc.bash.bashrc",
+  "merge": "5.2.37-2 -> 5.3-1",
+  "human": "dropped",
+  "h_absent": false
+ },
+ {
+  "id": "c17",
+  "pkg": "cups",
+  "file": "debian/rules",
+  "merge": "2.4.7-1.2 -> 2.4.10-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c18",
+  "pkg": "mutter",
+  "file": "debian/control",
+  "merge": "49.2-1 -> 50~beta-2",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c19",
+  "pkg": "brltty",
+  "file": "debian/rules",
+  "merge": "6.7-1 -> 6.9.1+repack-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c20",
+  "pkg": "dbus",
+  "file": "debian/control",
+  "merge": "1.16.2-2 -> 1.16.2-4",
+  "human": "dropped",
+  "h_absent": false
+ },
+ {
+  "id": "c21",
+  "pkg": "gnome-initial-setup",
+  "file": "debian/control",
+  "merge": "47.2-1 -> 48~rc-1",
+  "human": "edited",
+  "h_absent": false
+ },
+ {
+  "id": "c22",
+  "pkg": "unbound",
+  "file": "debian/patches/series",
+  "merge": "1.22.0-2 -> 1.24.2-1",
+  "human": "dropped",
+  "h_absent": false
+ },
+ {
+  "id": "c23",
+  "pkg": "dovecot",
+  "file": "debian/rules",
+  "merge": "1:2.4.2+dfsg1-3 -> 1:2.4.4+dfsg1-2",
+  "human": "edited",
+  "h_absent": false
+ }
+]

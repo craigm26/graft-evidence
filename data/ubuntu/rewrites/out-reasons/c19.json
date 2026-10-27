@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Changelog 'Remaining changes: add brltty-setup ... debian/rules', 'add udev rules file that uses brltty-udev.service ... debian/rules' and 'disable brltty.service by default ... debian/rules' are not in Debian, so they are re-applied with paths moved to /usr since Debian dropped dh_movetousr.",
+ "confidence": 0.7
+}

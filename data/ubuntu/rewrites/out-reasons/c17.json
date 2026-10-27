@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Remaining changes '--enable-snapped-clients', '--with-tls=gnutls' and 'Remove Debian's own (broken) cups.pc file (LP: #2059157)' are not in Debian 2.4.10-1, so they (with pkgconfpath/system-groups) are reapplied on the new rules.", "confidence": 0.8}

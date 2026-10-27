@@ -1,0 +1,6 @@
+{
+ "id": "c15",
+ "package": "util-linux",
+ "file": "debian/patches/series",
+ "merge": "2.41-4 -> 2.41.2-4"
+}

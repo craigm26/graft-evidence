@@ -1,0 +1,6 @@
+{
+ "decision": "drop",
+ "absent": false,
+ "reason": "Ubuntu's change was 'gdm3.{postinst,postrm}: rename user and group back to gdm', but Debian 49.0.1-1's postrm no longer deletes any user/group (users come from gdm3.sysusers), so nothing is left to rename here.",
+ "confidence": 0.75
+}

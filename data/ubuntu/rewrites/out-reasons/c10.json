@@ -1,0 +1,6 @@
+{
+ "decision": "drop",
+ "absent": false,
+ "reason": "The Ubuntu changelog only says 'Merge from Debian.' with no change to this generated hw/xquartz/GL/Makefile.in, so the file from the new upstream 2:21.1.24-1 tarball is used unchanged.",
+ "confidence": 0.8
+}

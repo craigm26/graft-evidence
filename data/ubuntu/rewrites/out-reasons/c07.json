@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "1.16.2-2ubuntu1 'Remaining changes: Add Ubuntu-specific patches d/p/u/aa-get-connection-apparmor-security-context.patch, d/p/u/dont-stop-dbus.patch' (dont-stop-dbus updated for LP: #2141603), so they are appended to Debian's new series.",
+ "confidence": 0.9
+}

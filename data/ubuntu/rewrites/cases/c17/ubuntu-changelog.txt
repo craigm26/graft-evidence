@@ -1,0 +1,98 @@
+cups (2.4.7-1.2ubuntu9) oracular; urgency=medium
+
+  * SECURITY REGRESSION: early exit on missing listen directive
+    - d/p/fix-scheduler-start-if-only-domain-socket-to-listen.patch: don't
+      exit if no valid Listen or Port found (LP: #2070315) 
+
+ -- Sudhakar Verma <sudhakar.verma@canonical.com>  Tue, 02 Jul 2024 17:37:44 +0530
+
+cups (2.4.7-1.2ubuntu8) oracular; urgency=medium
+
+  * SECURITY UPDATE: cupsd listen arbitrary chmod 0140777
+    - debian/patches/CVE-2024-35235.patch: validate status of unlink and bind
+      in cups/http-addr.c
+    - CVE-2024-35235 
+
+ -- Sudhakar Verma <sudhakar.verma@canonical.com>  Fri, 21 Jun 2024 15:57:06 +0530
+
+cups (2.4.7-1.2ubuntu7) noble; urgency=low
+
+  * Another fix for crash caused by the fix of the background polling of
+    printer capability information in ...ubuntu4. Added also commit 6aeb03b
+    from 2.4.x GIT branch to the patch (LP: #2060692, Upstream issue #934,
+    pull request #935).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 12 Apr 2024 22:13:19 +0200
+
+cups (2.4.7-1.2ubuntu6) noble; urgency=low
+
+  * Fix crash caused by the fix of the background polling of printer
+    capability information in ...ubuntu4. Added commit 2e65a35 from 2.4.x
+    GIT branch to the patch (LP: #2060692, Upstream issue #934, pull
+    request #937).
+  * Backported upstream commits 939368f from 2.4.x GIT branch, to
+    fix the auto-repeating of a job in Raster mode when failed printing
+    in PDF mode, due to printer-internal bug/incompatibility (Upstream
+    issue #391).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 11 Apr 2024 23:23:19 +0200
+
+cups (2.4.7-1.2ubuntu5) noble; urgency=low
+
+  * Longer timeout for Avahi resolving for cupsGetDests() API function, used
+    by "lpstat -l -e" (Upstream issues #47, #751, fix is already in place
+    in the CUPS Snap).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Sat,  6 Apr 2024 00:05:19 +0200
+
+cups (2.4.7-1.2ubuntu4) noble; urgency=low
+
+  * Backported upstream commits 6c6e1b0, ff16dab, and df3718b from 2.4.x GIT
+    branch, to
+    - Fix race condition due to removal of temporary queue while still accessing
+      it. Now timeout clock is reset on every access, temporary queues not
+      created if there is a permanent queue to the same printer, temporary queues
+      expire after 5 min instead of 1 min (Upstream issue #871).
+    - Fix temporary queue appearing as raw queue while CUPS is still polling
+      the capability information from the printer. This breaks print dialogs and
+      printing itself. Now queue creation is deleayed until the PPD is ready
+      (Upstream issue #347).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri,  5 Apr 2024 22:48:19 +0200
+
+cups (2.4.7-1.2ubuntu3) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 07:31:09 +0000
+
+cups (2.4.7-1.2ubuntu2) noble; urgency=low
+
+  * Remove Debian's own (broken) cups.pc file, CUPS has it upstreanm from
+    2.4.6 on (LP: #2059157).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 26 Mar 2024 23:17:19 +0100
+
+cups (2.4.7-1.2ubuntu1) noble; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - Added "--enable-snapped-clients" to the "./configure" options to use
+      the correct Snap mediation mode for an unsnapped cupsd, like provided
+      by this package.
+    - In the AppArmor profile allow CUPS to access (/var)/run/snapd.socket
+      to allow cupsd to determine which interfaces a snapped client
+      is plugging.
+    - Build-depend on libapparmor-dev, libsnapd-glib-dev, needed for
+      Snap mediation.
+    - Added fully automatic generation of PPD option setting presets to
+      be applied depending on the settings of the job IPP attributes
+      "print-color-mode", "print-quality", and "print-content-optimize".
+      This allows easy control of any printer with only standard IPP
+      attributes, as for example from a phone (functionality overtaken
+      from cups-filters, mot (yet) upstream in CUPS).
+    - In debian/rules updated ./configure arguments from --enable-gnutls to
+      --with-tls=gnutls. Now libcups has support for all hash types again,
+      especially can provide sha2-256 to PAPPL.
+    - In libcupsimage2 recommend libcupsfilters2 instead of libcupsfilters1.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 19 Mar 2024 10:46:19 +0100

@@ -1,0 +1,7 @@
+xorg-server (2:21.1.24-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    -  CVE-2026-55999: glamor Font Atlas Heap Buffer Overflow
+    -  CVE-2026-56000: GLX contextTags Use-After-Free in CommonMakeCurrent()
+    Closes: #1141703.

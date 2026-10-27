@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu still carries its own udev rules (brltty.udev.rules.patch, absent from Debian), so the extra udev rules directory is kept, moved under /usr to match Debian's /lib -> /usr/lib move.", "confidence": 0.5}

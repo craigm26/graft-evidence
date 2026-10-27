@@ -1,0 +1,58 @@
+brltty (6.7-1ubuntu6) resolute; urgency=medium
+
+  * No-change rebuild to drop Python 3.13 bits.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 20 Mar 2026 11:33:27 +0100
+
+brltty (6.7-1ubuntu5) resolute; urgency=medium
+
+  * No-change rebuild for icu soname.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 02 Dec 2025 22:51:21 +0100
+
+brltty (6.7-1ubuntu4) resolute; urgency=medium
+
+  * No-change rebuild with Python 3.14 as supported version
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Mon, 20 Oct 2025 13:55:31 +0000
+
+brltty (6.7-1ubuntu3) plucky; urgency=medium
+
+  * No-change rebuild with Python 3.13 only
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Tue, 04 Mar 2025 16:59:25 +0000
+
+brltty (6.7-1ubuntu2) plucky; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 05 Jan 2025 20:29:54 +0100
+
+brltty (6.7-1ubuntu1) plucky; urgency=medium
+
+  * Merge from Debian unstable (LP: #2089289). Remaining changes:
+    + add brltty-setup
+      - debian/brltty-setup
+      - debian/brltty.install
+      - debian/rules
+    + add initramfs integration to run brltty-setup if necessary before
+      plymouth starts
+      - debian/initramfs/brltty.sh
+      - debian/initramfs/hooks/brltty.in
+      - debian/initramfs/scripts/init-premount/brltty
+      - debian/initramfs/scripts/init-top/brltty
+      - debian/brltty.install
+      - debian/brltty.postinst
+    + add udev rules file that uses brltty-udev.service to activate via
+      systemd
+      - debian/brltty-udev.service
+      - debian/brltty.dirs
+      - debian/brltty.udev.rules.patch
+      - debian/rules
+      - debian/clean
+    + disable brltty.service by default, but enable it if the user configures
+      Braille at install time for a non-USB display
+      - debian/rules
+  * Disable generic devices 1A86:55D3 and 1A86:7523 (LP: #1958224)
+
+ -- Alessandro Astone <alessandro.astone@canonical.com>  Fri, 22 Nov 2024 10:10:12 +0100

@@ -1,0 +1,6 @@
+{
+ "id": "c02",
+ "package": "gnupg2",
+ "file": "debian/control",
+ "merge": "2.4.8-2 -> 2.4.8-4"
+}

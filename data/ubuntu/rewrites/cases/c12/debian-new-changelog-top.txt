@@ -1,0 +1,4 @@
+shadow (1:4.17.4-2) unstable; urgency=medium
+
+  * Allow LOGIN_ENV_SAFELIST (from util-linux) in /etc/login.defs.
+    Using patch from upstream.

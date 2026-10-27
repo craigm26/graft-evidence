@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Ubuntu still carries a delta ('Remaining changes: Add Ubuntu-specific patches ... dont-stop-dbus.patch'), so debian/control keeps the Ubuntu Maintainer/XSBC-Original-Maintainer convention on top of 1.16.2-4.",
+ "confidence": 0.85
+}

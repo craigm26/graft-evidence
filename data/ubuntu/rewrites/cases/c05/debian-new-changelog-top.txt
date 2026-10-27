@@ -1,0 +1,10 @@
+brltty (6.9.1+repack-1) unstable; urgency=medium
+
+  * Re-import version 6.9.1 with filtering rules really enforced.
+  * rules: Explicitly disable ocaml bindings.
+  * brltty-udeb.udev.{rules,sh}: Record when a USB-generic device was detected.
+  * brltty-udeb.{templates,postinst}: Ask for confirmation that a USB-generic
+    device is a braille device (Closes: Bug#1134497).
+  * control: Disable doxygen, linuxdoc-tools, groff in nodoc profile.
+  * rules: Disable doc-related calls in nodoc profile.
+  * salsa-ci.yml: Also test nodoc profile.

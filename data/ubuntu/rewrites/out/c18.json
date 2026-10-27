@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's Maintainer/XSBC-Original-Maintainer and ubuntu/latest Vcs fields are still needed; carried on top of Debian's 50~beta control.", "confidence": 0.85}

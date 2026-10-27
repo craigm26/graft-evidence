@@ -1,0 +1,6 @@
+{
+ "decision": "drop",
+ "absent": false,
+ "reason": "Both Ubuntu patches are superseded: Debian 1.24.2-1 is the 'new upstream security release ... CVE-2025-11411' and ships its own replace-deprecated-function-by-new-action.patch (Ubuntu's fix_ftbfs_function.patch: 'replace deprecated $function by new $action'), and the CVE-2025-5994 patch is gone upstream too.",
+ "confidence": 0.85
+}

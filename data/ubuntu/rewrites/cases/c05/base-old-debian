@@ -1,0 +1,4 @@
+etc/brltty
+lib/brltty
+usr/share/initramfs-tools/hooks
+usr/share/initramfs-tools/scripts/init-premount

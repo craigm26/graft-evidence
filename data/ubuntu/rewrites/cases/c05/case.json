@@ -1,0 +1,6 @@
+{
+ "id": "c05",
+ "package": "brltty",
+ "file": "debian/brltty.dirs",
+ "merge": "6.7-1 -> 6.9.1+repack-1"
+}

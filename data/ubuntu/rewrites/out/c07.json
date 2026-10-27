@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's AppArmor security-context and dont-stop-dbus patches are still Ubuntu-specific and not in Debian; carry them after Debian's new series (riscv64 timeout patch removed by Debian).", "confidence": 0.85}

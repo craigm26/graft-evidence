@@ -1,0 +1,6 @@
+debian/source_shadow.py usr/share/apport/package-hooks
+bin/login usr/bin
+etc/login.defs etc
+sbin/nologin usr/sbin
+usr/bin/newgrp
+usr/share/locale/*/LC_MESSAGES/shadow.mo

@@ -1,0 +1,6 @@
+{
+ "id": "c16",
+ "package": "bash",
+ "file": "debian/etc.bash.bashrc",
+ "merge": "5.2.37-2 -> 5.3-1"
+}

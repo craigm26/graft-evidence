@@ -1,0 +1,103 @@
+sssd (2.12.0-1ubuntu9) stonking; urgency=medium
+
+  * No-change rebuild against libssl4
+
+ -- Ravi Kant Sharma <ravi.kant.sharma@canonical.com>  Fri, 24 Jul 2026 15:26:59 +0000
+
+sssd (2.12.0-1ubuntu8) stonking; urgency=medium
+
+  * d/sssd-common.postinst: also set capabilities for helper binaries
+    from other packages, if they are present (LP: #2155002)
+
+ -- Andreas Hasenack <andreas.hasenack@canonical.com>  Wed, 08 Jul 2026 11:32:55 -0300
+
+sssd (2.12.0-1ubuntu7) stonking; urgency=medium
+
+  * No-change rebuild with new src:ding-libs (bin:libini-config-dev)
+
+ -- Andreas Hasenack <andreas.hasenack@canonical.com>  Tue, 07 Jul 2026 11:07:18 -0300
+
+sssd (2.12.0-1ubuntu6) stonking; urgency=medium
+
+  * libsss-sudo: ensure 'files' is present in nsswitch.conf sudoers line
+    (LP: #2151950)
+    - d/libsss-sudo.nss: add 'files' with skip-if-present=files so fresh
+      installs get 'sudoers: files sss'
+    - d/libsss-sudo.postinst: add custom snippet to prepend 'files' on
+      upgrade from broken versions that only had 'sudoers: sss'
+
+  [ Simon Josefsson ]
+  * Adapt B-D for ding-libs>=0.7.0.
+  * Fix FTBFS with ding-libs>=0.7.0 (patch from upstream).
+
+ -- Guilherme Puida Moreira <guilherme.moreira@canonical.com>  Tue, 02 Jun 2026 16:31:55 -0300
+
+sssd (2.12.0-1ubuntu5) resolute; urgency=medium
+
+  * d/p/krb5_kpasswd_loglevel: fix missing krb5_kpasswd logging as crash
+    (LP: #2146334)
+
+ -- Jonas Jelten <jj@ubuntu.com>  Wed, 25 Mar 2026 17:08:42 +0100
+
+sssd (2.12.0-1ubuntu4) resolute; urgency=medium
+
+  * d/sssd-common.{pre,post}inst: stop services while changing
+    root-less permissions (LP: #2142140)
+  * d/t/util: remove obsolete sssd.conf config_file_version
+
+ -- Jonas Jelten <jj@ubuntu.com>  Tue, 17 Mar 2026 16:27:51 +0100
+
+sssd (2.12.0-1ubuntu3) resolute; urgency=medium
+
+  [ Jonas Jelten ]
+  * don't run as root (LP: #2139337)
+    - d/rules: use --with-sssd-user=sssd
+    - d/rules: install tmpfiles.d/sssd.conf for pid file
+    - d/rules: install udev rules
+    - d/sssd-postinst-permission-extract: new spec -> postinst convert tool
+    - d/sssd-{common,ipa,krb5-common,proxy}.postinst:
+      set correct state directory permissions for sssd user
+    - d/t/sssd-smart-card-pam-auth-configs-tester: fix enabling incompatible
+      pam configs at once
+    - d/t/sssd-smart-card-pam-auth-configs-tester: adjust permissions for
+      running sssd without root
+    - d/t/sssd-softhism2-certificates-tests: don't recreate existing user
+
+  [ Timo Aaltonen ]
+  * libsss-sudo: Drop dependency on libnss-sudo, modify libsss-sudo.nss to create
+    the nsswitch.conf entry for sudo. (Closes: #770825)
+
+ -- Jonas Jelten <jj@ubuntu.com>  Wed, 17 Feb 2026 19:37:41 +0100
+
+sssd (2.12.0-1ubuntu1) resolute; urgency=medium
+
+  * Merge with Debian unstable (LP: #2130705). Remaining changes:
+    - d/control: Drop libgdm-dev Build-Depend on i386.
+    - d/control: Don't build sssd-tools on i386, now uninstallable due
+      to added python3-{click,systemd} dependencies.
+  * Dropped changes:
+    - d/apparmor-profile: update apparmor profile for smartcard authentication
+      (LP #2109673)
+      [in 2.12.0-1]
+    - d/p/CVE-2025-11561: incorrect fallback to the an2ln plugin: disable Kerberos
+      localauth an2ln plugin for AD/IPA in src/util/domain_info_utils.c.
+      [in 2.12.0-1]
+    - debian/patches/fix_krb5_dep.patch: fix build with krb5 1.22.
+      [in 2.11.1-2]
+    - Continue searching other PKCS#11 tokens if certificates are not found
+      (LP #2110521)
+      + d/p/lp2110521-1-P11_CHILD-Extract-slot-processing-into-separate-func.patch
+      + d/p/lp2110521-2-P11_CHILD-Make-p11_child-iterate-over-all-slots.patch
+      [in 2.11.1-1]
+    - faketime on armhf (LP #2059078)
+      + Reintroduce faketime on armhf, it might be fixed now
+      + d/control: faketime is used for tests, and is currently not
+        working on armhf with a 64bit time_t
+      [cancel each other out]
+  * New changes:
+    - d/t/sssd-{softhism2-certificates-test,smart-card-pam-auth-configs-tester}:
+      fix test user creation
+    - d/t/sssd-smart-card-pam-auth-configs-tester: remove files provider
+      [changed in 2.11.0 upstream]
+
+ -- Jonas Jelten <jj@ubuntu.com>  Mon, 09 Feb 2026 15:48:59 +0100

@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's Maintainer swap, !i386 libgdm-dev restriction and sssd-tools architecture list are not covered by Debian and are carried forward onto 2.12.0-4 (other Ubuntu deltas now match Debian).", "confidence": 0.75}

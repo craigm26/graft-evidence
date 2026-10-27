@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Carry Ubuntu's sulogin, test, arm-cores and su-pty hardening patches on the new Debian series, dropping the upstream double-free fix included in 2.41.2.", "confidence": 0.6}

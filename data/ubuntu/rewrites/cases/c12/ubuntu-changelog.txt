@@ -1,0 +1,26 @@
+shadow (1:4.16.0-7ubuntu1) plucky; urgency=medium
+
+  * Merge with Debian unstable. Remaining changes (LP: #2089923):
+    - d/p/* : Enable private home directories by default
+    - debian/{source_shadow.py,login.defs.install}: Add apport hook
+    - debian/patches/1010_extrausers.patch:
+      + Add support to passwd for libnss-extrausers
+      + Add automatic detection of "extrausers" for usermod -G
+    - d/p/1011_extrausers_toggle.patch: extrausers support for useradd/groupadd
+    - d/p/1012_extrausers_chfn.patch: --extrausers support for chfn tool
+    - d/p/1013_extrausers_deluser.patch: --extrausers support for userdel
+    - d/p/1014_extrausers_delgroup.patch: --extrausers support for groupdel
+    - d/p/1016_extrausers_gpasswd.patch: extrausers support for gpasswd
+    - d/p/506_relaxed_usernames.patch, d/t/{control,numeric-username}:
+    - d/t/smoke: Extend for extrausers support
+    - Add some cursory tests for the extrausers features
+    - d/p/lp2063200: fix useradd group validation with extrausers (LP 2063200)
+
+  * New Changes:
+    - d/tests: make 'upstream' tests work with current sources layout
+
+  * Drop Changes:
+    - d/p/1015_add_zsys_support.patch: zsys to handle home dir if available
+      Reason: buggy and unmaintained zsys integration (LP: #2049529)
+
+ -- Florent 'Skia' Jacquet <florent.jacquet@canonical.com>  Mon, 02 Dec 2024 12:39:54 +0100

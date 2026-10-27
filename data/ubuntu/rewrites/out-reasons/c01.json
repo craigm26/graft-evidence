@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "'Fix autopkgtest' (2:2.7.5-2ubuntu2) disabled the cryptdisks test (no /dev/tty in CI) and cryptroot-sysvinit; Debian 2.8.0-1 does not address this, so the change is reapplied, commenting out Debian's updated sysvinit stanza including the new e2fsprogs dep.",
+ "confidence": 0.75
+}

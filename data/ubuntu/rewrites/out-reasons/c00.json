@@ -1,0 +1,6 @@
+{
+ "decision": "drop",
+ "absent": true,
+ "reason": "Debian 1:4.16.0 no longer builds the login binary package (no debian/login.* files in the new tree), so login.install is gone; Ubuntu's 'debian/{source_shadow.py,login.install}: Add apport hook' must be carried elsewhere (e.g. passwd.install), not in this file.",
+ "confidence": 0.8
+}

@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Remaining change 'add udev rules file that uses brltty-udev.service ... debian/brltty.dirs' is still Ubuntu-only (brltty-udev.service absent from Debian 6.9.1), so lib/udev/rules.d is kept on top of Debian's usr/lib/brltty move.",
+ "confidence": 0.6
+}

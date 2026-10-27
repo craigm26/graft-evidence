@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "261-1ubuntu1 'Remaining changes' (Ubuntu maintainer/Vcs, systemd-resolved Recommends, Priority: important, systemd-hwe-hwdb, bpf off on riscv64, no tpm/qrencode on i386, userdbd Suggests) still apply; 'Drop Recommends: libnss-myhostname libnss-resolve' is now matched by Debian moving them to Suggests, and Debian's new systemd-imds/report/tpm entries are taken.",
+ "confidence": 0.85
+}

@@ -1,0 +1,31 @@
+unbound (1.22.0-2ubuntu4) resolute; urgency=medium
+
+  * debian/patches/fix_ftbfs_function.patch: replace deprecated $function
+    by new $action.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 04 Nov 2025 16:27:33 +0100
+
+unbound (1.22.0-2ubuntu3) resolute; urgency=medium
+
+  * SECURITY UPDATE: promiscuous NS RRSets domain hijack issue
+    - debian/patches/CVE-2025-11411.patch: fix possible domain hijacking
+      attack and add new iter-scrub-promiscuous configuration option.
+    - CVE-2025-11411
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 31 Oct 2025 08:47:51 -0400
+
+unbound (1.22.0-2ubuntu2) questing; urgency=medium
+
+  * Rebuild to include updated RISC-V base ISA RVA23
+
+ -- Heinrich Schuchardt <heinrich.schuchardt@canonical.com>  Sat, 06 Sep 2025 15:37:34 +0000
+
+unbound (1.22.0-2ubuntu1) questing; urgency=medium
+
+  * Merge with Debian unstable. Remaining changes:
+    - Don't build with hiredis on i386.  hiredis and redis are not built
+      on i386 and require bootstrapping due to circular
+      build-dependencies; simpler to just disable this in the i386
+      unbound server binary (that no one will ever use).
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 22 Jul 2025 08:58:36 -0400

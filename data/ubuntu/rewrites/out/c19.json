@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's brltty udev rules/brltty-udev systemd service and brltty-setup delta is not in Debian; carried forward with paths updated to /usr now that Debian dropped dh_movetousr.", "confidence": 0.6}

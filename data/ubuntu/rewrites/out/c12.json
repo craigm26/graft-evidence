@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Rebase series on new Debian list, keeping Ubuntu's private-home and extrausers patches while dropping the fully-numeric-name and lp2063200 useradd patches, which are upstream in 4.17.", "confidence": 0.55}

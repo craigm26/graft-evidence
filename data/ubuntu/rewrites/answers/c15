@@ -1,0 +1,15 @@
+debian/man-getopt-examples.patch
+debian/verbose-tests.patch
+debian/hardlink-tests-known-failed.patch
+debian/lsfd-usrbin.patch
+debian/sensible-pager.patch
+debian/login-support-LOG_OK_LOGINS.patch
+debian/login-do-not-print-motd-done-by-PAM.patch
+debian/login-turn-off-btmp-utmp-lastlog-writing.patch
+debian/salsa-ci-skip-tests.patch
+upstream/lscpu-use-maximum-CPU-speed-from-DMI-avoid-duplicate-vers.patch
+upstream/ldattach-Allow-changing-the-MTU-for-GSM0710-framing.patch
+ubuntu/sulogin-fallback-static-sh.patch
+ubuntu/sulogin-lockedpwd.patch
+ubuntu/lp-2030793-make-check-pidfd.patch
+ubuntu/lp-2112552-tests-mark-mkfds-multiplexing-as-known-fail.patch

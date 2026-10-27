@@ -1,0 +1,6 @@
+systemd (261.1-2) unstable; urgency=medium
+
+  * Make systemd actually temporarily depend on systemd-tpm. This was
+    mentioned in NEWS but forgotten, add it for a while to ease transition
+  * d/t/control: pull new packages in upstream test suite
+  * d/t/control: pull in cpio for upstream suite. Needed by mkosi

@@ -1,0 +1,23 @@
+gtk+3.0 (3.24.49-3ubuntu1) questing; urgency=medium
+
+  * Resynchronize with Debian, remaining changes:
+    + Add Build-Depends: dh-sequence-translations
+    + Install a settings.ini file to set our themes
+    + Update debian/libgtk-3-0t64.symbols for ubuntu_gtk_custom_menu_items.patch
+    + Ubuntu-specific patches:
+      - 073_treeview_almost_fixed.patch
+      - bzg_gtkcellrenderer_grabbing_modifier.patch
+      - ubuntu_gtk_custom_menu_items.patch
+      - print-dialog-show-options-of-remote-dnssd-printers.patch
+      - uimanager-guard-against-nested-node-updates.patch
+      - x-canonical-accel.patch
+      - message-dialog-restore-traditional-look-on-unity.patch
+      - 0001-gtk-reftest-Force-icon-theme-to-Adwaita.patch
+      - restore_filechooser_typeaheadfind.patch
+      - 0001-calendar-always-emit-day-selected-once.patch
+      - 0001-gtkwindow-set-transparent-background-color.patch
+      - unity-border-radius.patch
+      - unity-headerbar-maximized-mode.patch
+      - gitlab_opengl_fallback.patch
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 05 May 2025 11:37:57 -0400

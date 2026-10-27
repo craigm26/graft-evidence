@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Remaining changes 'd/control: Drop libgdm-dev Build-Depend on i386' and 'Don't build sssd-tools on i386' plus Ubuntu Maintainer convention are reapplied; Debian 2.12.0-4 already has the ding-libs B-D and libsss-sudo libnss-sudo drop.", "confidence": 0.85}

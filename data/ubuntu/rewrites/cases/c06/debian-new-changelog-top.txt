@@ -1,0 +1,54 @@
+gtk+3.0 (3.24.50-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix a memory leak in gtk_clipboard_wait_for_targets()
+    - If a GtkNotebook drag fails, reset the drag operation to None
+      so that the tab can be redrawn
+    - In the file chooser dialog, add a tooltip to the Search button
+    - Revert an input method change that could cause Eclipse crashes
+      (regression in 3.24.44)
+    - Embed PNG icons in the library as PNGs, instead of preprocessing
+      them into uncompressed pixel data with the deprecated
+      gdk-pixbuf-pixdata tool
+    - Extend the SVG subset used in symbolic icons to support applying a
+      stroke style to paths
+    - Fix a possible crash in the CUPS printing code
+    - Allow building against libcups version 3
+      (not yet relevant in Debian, we still build-depend on libcups2-dev)
+    - Default to Adwaita Sans font instead of Cantarell
+    - Include "KP" prefix in the names given for more numeric keypad keys
+    - Speed up app startup by making Pango initialize Fontconfig earlier,
+      in parallel with other startup actions
+    - If the print previewer is set to Evince, automatically prefer Papers
+      if installed, either as a Flatpak app or a .deb
+    - Improve the choice of preedit representation for input methods,
+      especially Compose sequences
+    - Don't report window title changes to accessibility tools if the
+      title didn't actually change
+    - On X11, include window borders in frame extents and geometry, fixing
+      visual issues in Firefox
+    - On Wayland, fix a crash and a memory leak when reporting the name
+      and description of an output
+    - On Wayland, fix a possible crash when there are no outputs
+      connected (a "headless" display)
+    - When not running in a Flatpak sandbox, identify the app to
+      xdg-desktop-portal (if installed) during initialization
+    - Fix a compiler warning with -Wundef
+    - Translation updates
+    - macOS- and Windows-specific changes not relevant to Debian
+  * d/patches: Drop patches that were included in the upstream release
+  * d/p/printing-Default-to-papers-previewer-and-fallback-to-evin.patch:
+    Drop patch defaulting to papers-previewer for print preview.
+    This was solved differently in the new upstream release.
+  * d/p/workarounds/Revert-Replace-hardcoded-values-of-Cantarell.patch:
+    Revert the change from Cantarell to Adwaita Sans as UI font.
+    Adwaita Sans isn't packaged yet (ITP: #1101879) and until it is,
+    we should keep using Cantarell.
+  * d/libgtk-3-0t64.bug-control: Add details of more GTK_MODULES to
+    bug reports.
+    Arbitrary code injected into all GTK applications can easily lead to
+    crashes or other unintended interactions, so it's good to have these
+    diagnosed as "packages libgtk-3-0t64 is related to" in bug reports.
+  * d/libgtk-3-doc.links.in: Remove unused symlinks to other packages' docs.
+    All except atk/ were dangling symlinks anyway, as a result of the
+    other packages' transition from gtk-doc to gi-docgen.

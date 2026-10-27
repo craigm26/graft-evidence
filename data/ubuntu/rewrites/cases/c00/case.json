@@ -1,0 +1,6 @@
+{
+ "id": "c00",
+ "package": "shadow",
+ "file": "debian/login.install",
+ "merge": "1:4.15.3-3 -> 1:4.16.0-7"
+}

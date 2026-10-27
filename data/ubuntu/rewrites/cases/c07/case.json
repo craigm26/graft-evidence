@@ -1,0 +1,6 @@
+{
+ "id": "c07",
+ "package": "dbus",
+ "file": "debian/patches/series",
+ "merge": "1.16.2-2 -> 1.16.2-4"
+}

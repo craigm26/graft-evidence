@@ -1,0 +1,12 @@
+printing-Default-to-papers-previewer-and-fallback-to-evin.patch
+016_no_offscreen_widgets_grabbing.patch
+017_no_offscreen_device_grabbing.patch
+060_ignore-random-icons.patch
+reftest_compare_surfaces-Report-how-much-the-images-diffe.patch
+reftests-Allow-minor-differences-to-be-tolerated.patch
+gtksocket-Fix-wrong-sanity-check.patch
+widget-Explicitly-annotate-visible-s-getter.patch
+widget-Explicitly-annotate-sensitive-s-getter.patch
+action-Annotate-sensitive-visible-getters.patch
+widget-Fix-typo-in-docstring-s-property-name.patch
+icons-add-spinner-icon.patch

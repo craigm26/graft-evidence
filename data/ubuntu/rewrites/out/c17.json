@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu's configure options (pkgconfpath, --with-tls=gnutls, lpadmin system groups, snapped clients) and the drop of the manual cups.pc install are not in Debian 2.4.10, so they are carried on top of Debian's usrmerge and riscv64 test changes.", "confidence": 0.75}

@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Debian 1.5.3-7 only adds ftbfs-implicit-function-declaration, which Ubuntu already carries in the same position, so Ubuntu's series (Ubuntu feature patches, pam_namespace 1.7.0 backport replacing pam_namespace_o_directory, and CVE fixes) is kept as-is.", "confidence": 0.75}

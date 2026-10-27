@@ -1,0 +1,6 @@
+{
+ "decision": "keep",
+ "absent": false,
+ "reason": "Remaining changes in 2.4.8-2ubuntu1 (Ubuntu Maintainer, no gpg-wks on i386, demoted Recommends, no gpgv-win32, 'Disable swtpm, libss2-dev build-dep on i386') still apply; merged with Debian's linux-any restrictions (libtss2-dev kept as [!i386], Architecture lists kept).",
+ "confidence": 0.8
+}

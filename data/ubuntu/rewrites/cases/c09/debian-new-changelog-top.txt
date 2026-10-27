@@ -1,0 +1,14 @@
+gdm3 (49.0.1-1) experimental; urgency=medium
+
+  [ Jeremy Bícha ]
+  * New upstream release
+  * udev rules are no longer installed
+  * Completely stop providing Debian custom xsession support
+
+  [ Alessandro Astone ]
+  * d/libgdm1.symbols: Add new symbols
+  * d/rules: Remove obsolete meson options screenshot-dir, ran-once-marker-dir
+  * Remove gcc 15 patch: applied in new release
+
+  [ Daniel van Vugt ]
+  * Make gdm3 depend on libnss-systemd (LP: #2121017)

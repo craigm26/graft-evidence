@@ -1,0 +1,10 @@
+{
+ "ZZZgnutls-build.patch": "Build with GnuTLS.",
+ "build-Divide-mit-krb5-gssapi-link-flags-between-LDFLAGS-a.patch": "build: Divide mit-krb5-gssapi link flags between LDFLAGS and LIBS",
+ "11_omit-directories-from-config.patch": "Omit directories embedding arch info from curl-config",
+ "test459-switch-to-mode-warn-for-stderr-check.patch": "test459: switch to mode=\"warn\" for stderr check",
+ "event-fix-wakeup-consumption.patch": "event: fix wakeup consumption",
+ "Implement-symbol-versioning-for-CURL_GNUTLS_3.patch": "Implement symbol versioning for CURL_GNUTLS_3",
+ "disable-strictmodes-in-test-sshd.patch": "Disable StrictModes in test sshd",
+ "tests-fix-type-promotion-on-32-bit-arches.patch": "tests: fix type promotion on 32-bit arches in http test code"
+}

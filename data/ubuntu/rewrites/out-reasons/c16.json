@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Debian 5.3-1 now carries the vte*.sh hook and commented profile.d block (2.37-2ubuntu2/ubuntu4), but not 'sync the color prompt setting from /etc/skel/.bashrc' (2.37-2ubuntu4), so only the color-prompt delta is kept; the sudo hint was already dropped (LP: #2120249).", "confidence": 0.65}

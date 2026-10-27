@@ -1,0 +1,515 @@
+{
+ "packages": 50,
+ "merges": 149,
+ "files": 3459,
+ "errors": 0,
+ "skipped": [],
+ "machine": {
+  "conflict": 329,
+  "clean": 2953,
+  "absorbed": 177
+ },
+ "human": {
+  "edited": 517,
+  "kept": 2267,
+  "dropped": 675
+ },
+ "graft": {
+  "race": 329,
+  "auto": 1972,
+  "confirm": 981,
+  "propose-drop": 177
+ },
+ "debian_touched": 654,
+ "control_person": 329,
+ "control_wrong": 863,
+ "control_wrong_by": {
+  "clean/edited": 232,
+  "clean/dropped": 630,
+  "absorbed/edited": 1
+ },
+ "graft_person": 1487,
+ "graft_person_granted": 1389,
+ "graft_wrong": 268,
+ "graft_wrong_examples": [
+  [
+   "systemd",
+   "261-1 -> 261.1-2",
+   "debian/systemd.postinst",
+   "edited"
+  ],
+  [
+   "systemd",
+   "261-1 -> 261.1-2",
+   "debian/tests/upstream",
+   "edited"
+  ],
+  [
+   "systemd",
+   "261.1-2 -> 261.2-1",
+   "debian/rules",
+   "edited"
+  ],
+  [
+   "systemd",
+   "261.1-2 -> 261.2-1",
+   "debian/systemd.postinst",
+   "dropped"
+  ],
+  [
+   "libvirt",
+   "11.6.0-1 -> 12.0.0-1",
+   "debian/libvirt-daemon-config-network.install",
+   "edited"
+  ],
+  [
+   "libvirt",
+   "11.6.0-1 -> 12.0.0-1",
+   "debian/libvirt-daemon-config-network.postinst",
+   "edited"
+  ],
+  [
+   "libvirt",
+   "11.6.0-1 -> 12.0.0-1",
+   "debian/libvirt-daemon-config-network.postrm",
+   "edited"
+  ],
+  [
+   "libvirt",
+   "11.6.0-1 -> 12.0.0-1",
+   "debian/libvirt-daemon-config-network.preinst",
+   "dropped"
+  ],
+  [
+   "libvirt",
+   "12.0.0-1 -> 12.6.0-1",
+   "debian/control",
+   "edited"
+  ],
+  [
+   "libvirt",
+   "12.0.0-1 -> 12.6.0-1",
+   "debian/control.in",
+   "edited"
+  ],
+  [
+   "libvirt",
+   "12.0.0-1 -> 12.6.0-1",
+   "debian/libvirt-clients.conffiles",
+   "dropped"
+  ],
+  [
+   "libvirt",
+   "12.0.0-1 -> 12.6.0-1",
+   "debian/libvirt-daemon-config-network.postinst",
+   "edited"
+  ]
+ ],
+ "confirm_right": 354,
+ "conflicts_ubuntu_dropped": 45,
+ "race_cost_usd": 272.9,
+ "race_cost_per_conflict": 0.829,
+ "race_cost_per_merge": 1.832,
+ "per_package": {
+  "alsa-utils": {
+   "merges": 3,
+   "files": 18,
+   "conflicts": 1,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 6
+  },
+  "apache2": {
+   "merges": 3,
+   "files": 74,
+   "conflicts": 1,
+   "control_wrong": 40,
+   "graft_wrong": 20,
+   "graft_person": 26
+  },
+  "bash": {
+   "merges": 3,
+   "files": 21,
+   "conflicts": 6,
+   "control_wrong": 2,
+   "graft_wrong": 0,
+   "graft_person": 8
+  },
+  "bind9": {
+   "merges": 3,
+   "files": 56,
+   "conflicts": 0,
+   "control_wrong": 39,
+   "graft_wrong": 2,
+   "graft_person": 38
+  },
+  "binutils": {
+   "merges": 3,
+   "files": 18,
+   "conflicts": 0,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 0
+  },
+  "brltty": {
+   "merges": 3,
+   "files": 37,
+   "conflicts": 2,
+   "control_wrong": 13,
+   "graft_wrong": 11,
+   "graft_person": 8
+  },
+  "cryptsetup": {
+   "merges": 3,
+   "files": 39,
+   "conflicts": 4,
+   "control_wrong": 5,
+   "graft_wrong": 1,
+   "graft_person": 13
+  },
+  "cups": {
+   "merges": 3,
+   "files": 36,
+   "conflicts": 5,
+   "control_wrong": 14,
+   "graft_wrong": 1,
+   "graft_person": 23
+  },
+  "curl": {
+   "merges": 3,
+   "files": 66,
+   "conflicts": 2,
+   "control_wrong": 60,
+   "graft_wrong": 0,
+   "graft_person": 63
+  },
+  "dbus": {
+   "merges": 3,
+   "files": 20,
+   "conflicts": 3,
+   "control_wrong": 1,
+   "graft_wrong": 1,
+   "graft_person": 6
+  },
+  "dovecot": {
+   "merges": 3,
+   "files": 44,
+   "conflicts": 5,
+   "control_wrong": 36,
+   "graft_wrong": 0,
+   "graft_person": 44
+  },
+  "exim4": {
+   "merges": 3,
+   "files": 22,
+   "conflicts": 3,
+   "control_wrong": 9,
+   "graft_wrong": 1,
+   "graft_person": 15
+  },
+  "freetype": {
+   "merges": 3,
+   "files": 12,
+   "conflicts": 1,
+   "control_wrong": 6,
+   "graft_wrong": 2,
+   "graft_person": 9
+  },
+  "gdm3": {
+   "merges": 3,
+   "files": 98,
+   "conflicts": 11,
+   "control_wrong": 17,
+   "graft_wrong": 6,
+   "graft_person": 30
+  },
+  "gnome-control-center": {
+   "merges": 3,
+   "files": 138,
+   "conflicts": 6,
+   "control_wrong": 31,
+   "graft_wrong": 0,
+   "graft_person": 45
+  },
+  "gnome-initial-setup": {
+   "merges": 3,
+   "files": 66,
+   "conflicts": 3,
+   "control_wrong": 13,
+   "graft_wrong": 6,
+   "graft_person": 16
+  },
+  "gnome-settings-daemon": {
+   "merges": 2,
+   "files": 25,
+   "conflicts": 2,
+   "control_wrong": 3,
+   "graft_wrong": 2,
+   "graft_person": 4
+  },
+  "gnome-shell": {
+   "merges": 3,
+   "files": 236,
+   "conflicts": 2,
+   "control_wrong": 37,
+   "graft_wrong": 2,
+   "graft_person": 100
+  },
+  "gnupg2": {
+   "merges": 3,
+   "files": 22,
+   "conflicts": 2,
+   "control_wrong": 5,
+   "graft_wrong": 3,
+   "graft_person": 6
+  },
+  "grub2": {
+   "merges": 3,
+   "files": 487,
+   "conflicts": 129,
+   "control_wrong": 174,
+   "graft_wrong": 81,
+   "graft_person": 273
+  },
+  "gst-plugins-bad1.0": {
+   "merges": 3,
+   "files": 43,
+   "conflicts": 2,
+   "control_wrong": 7,
+   "graft_wrong": 2,
+   "graft_person": 13
+  },
+  "gtk+3.0": {
+   "merges": 3,
+   "files": 64,
+   "conflicts": 5,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 10
+  },
+  "hplip": {
+   "merges": 3,
+   "files": 7,
+   "conflicts": 3,
+   "control_wrong": 3,
+   "graft_wrong": 1,
+   "graft_person": 6
+  },
+  "libvirt": {
+   "merges": 3,
+   "files": 246,
+   "conflicts": 4,
+   "control_wrong": 44,
+   "graft_wrong": 18,
+   "graft_person": 59
+  },
+  "mesa": {
+   "merges": 3,
+   "files": 9,
+   "conflicts": 3,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 4
+  },
+  "multipath-tools": {
+   "merges": 3,
+   "files": 37,
+   "conflicts": 2,
+   "control_wrong": 3,
+   "graft_wrong": 0,
+   "graft_person": 14
+  },
+  "mutter": {
+   "merges": 3,
+   "files": 31,
+   "conflicts": 4,
+   "control_wrong": 7,
+   "graft_wrong": 1,
+   "graft_person": 19
+  },
+  "net-snmp": {
+   "merges": 3,
+   "files": 23,
+   "conflicts": 4,
+   "control_wrong": 5,
+   "graft_wrong": 3,
+   "graft_person": 8
+  },
+  "nfs-utils": {
+   "merges": 3,
+   "files": 37,
+   "conflicts": 2,
+   "control_wrong": 2,
+   "graft_wrong": 0,
+   "graft_person": 7
+  },
+  "nginx": {
+   "merges": 3,
+   "files": 13,
+   "conflicts": 1,
+   "control_wrong": 1,
+   "graft_wrong": 0,
+   "graft_person": 3
+  },
+  "open-iscsi": {
+   "merges": 3,
+   "files": 53,
+   "conflicts": 2,
+   "control_wrong": 4,
+   "graft_wrong": 2,
+   "graft_person": 10
+  },
+  "openldap": {
+   "merges": 3,
+   "files": 29,
+   "conflicts": 6,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 10
+  },
+  "openssh": {
+   "merges": 3,
+   "files": 67,
+   "conflicts": 13,
+   "control_wrong": 1,
+   "graft_wrong": 0,
+   "graft_person": 22
+  },
+  "openvpn": {
+   "merges": 3,
+   "files": 24,
+   "conflicts": 0,
+   "control_wrong": 19,
+   "graft_wrong": 3,
+   "graft_person": 19
+  },
+  "pacemaker": {
+   "merges": 3,
+   "files": 29,
+   "conflicts": 2,
+   "control_wrong": 11,
+   "graft_wrong": 1,
+   "graft_person": 13
+  },
+  "pam": {
+   "merges": 3,
+   "files": 114,
+   "conflicts": 8,
+   "control_wrong": 50,
+   "graft_wrong": 31,
+   "graft_person": 34
+  },
+  "plymouth": {
+   "merges": 3,
+   "files": 363,
+   "conflicts": 17,
+   "control_wrong": 21,
+   "graft_wrong": 8,
+   "graft_person": 33
+  },
+  "poppler": {
+   "merges": 3,
+   "files": 16,
+   "conflicts": 3,
+   "control_wrong": 8,
+   "graft_wrong": 0,
+   "graft_person": 16
+  },
+  "procps": {
+   "merges": 3,
+   "files": 73,
+   "conflicts": 4,
+   "control_wrong": 23,
+   "graft_wrong": 21,
+   "graft_person": 7
+  },
+  "rhythmbox": {
+   "merges": 3,
+   "files": 52,
+   "conflicts": 4,
+   "control_wrong": 1,
+   "graft_wrong": 0,
+   "graft_person": 12
+  },
+  "samba": {
+   "merges": 3,
+   "files": 55,
+   "conflicts": 2,
+   "control_wrong": 33,
+   "graft_wrong": 1,
+   "graft_person": 36
+  },
+  "shadow": {
+   "merges": 3,
+   "files": 56,
+   "conflicts": 6,
+   "control_wrong": 18,
+   "graft_wrong": 11,
+   "graft_person": 25
+  },
+  "sssd": {
+   "merges": 3,
+   "files": 27,
+   "conflicts": 5,
+   "control_wrong": 5,
+   "graft_wrong": 0,
+   "graft_person": 17
+  },
+  "strongswan": {
+   "merges": 3,
+   "files": 39,
+   "conflicts": 3,
+   "control_wrong": 19,
+   "graft_wrong": 3,
+   "graft_person": 21
+  },
+  "sudo": {
+   "merges": 3,
+   "files": 105,
+   "conflicts": 16,
+   "control_wrong": 11,
+   "graft_wrong": 11,
+   "graft_person": 36
+  },
+  "systemd": {
+   "merges": 3,
+   "files": 44,
+   "conflicts": 9,
+   "control_wrong": 8,
+   "graft_wrong": 4,
+   "graft_person": 18
+  },
+  "tiff": {
+   "merges": 3,
+   "files": 23,
+   "conflicts": 2,
+   "control_wrong": 18,
+   "graft_wrong": 1,
+   "graft_person": 20
+  },
+  "unbound": {
+   "merges": 3,
+   "files": 28,
+   "conflicts": 3,
+   "control_wrong": 18,
+   "graft_wrong": 4,
+   "graft_person": 19
+  },
+  "util-linux": {
+   "merges": 3,
+   "files": 35,
+   "conflicts": 3,
+   "control_wrong": 18,
+   "graft_wrong": 3,
+   "graft_person": 22
+  },
+  "xorg-server": {
+   "merges": 3,
+   "files": 182,
+   "conflicts": 3,
+   "control_wrong": 0,
+   "graft_wrong": 0,
+   "graft_person": 123
+  }
+ }
+}

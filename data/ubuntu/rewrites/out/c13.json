@@ -1,0 +1,1 @@
+{"decision": "keep", "absent": false, "reason": "Ubuntu builds exim4-heavy without SPF (libspf2 not in main) and Debian still enables it, so the SPF hunk is again removed from the new diff.", "confidence": 0.8}
